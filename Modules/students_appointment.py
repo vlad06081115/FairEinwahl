@@ -7,7 +7,14 @@ from scipy.optimize import linear_sum_assignment
 logger = logging.getLogger(__name__)
 
 
-
+def norm(s : str) -> str:
+    if not isinstance(s, str):
+        return ''
+    
+    if ':' in s:
+        return s.split(':')[0].lower().strip()
+    
+    return s.lower().strip()
 
 
 def students_appointing(df, programms):
@@ -161,9 +168,8 @@ def students_appointing(df, programms):
                 sport = expanded_sports_list[c].split("_")[0]
                 semestrs_dataframes[semestr].loc[
                     semestrs_dataframes[semestr][sport].notna().sum(), sport
-                ] = f"{df.iloc[r]['Nachname']} {df.iloc[r]['Vorname']}"
+                ] = norm(f"{df.iloc[r]['Nachname']} {df.iloc[r]['Vorname']}")
                 
-
             check_min_requirment(
                 row_col=zip(row_ind, col_ind),
                 semestr=semestr,
