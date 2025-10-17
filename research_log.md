@@ -60,14 +60,14 @@ Die durchschnittlichen Zufriedenheitswerte sind leicht gestiegen, während die S
 
 Statistik Hung. Alg. , or-tools 1.0, or-tools 1.1 nach der Änderung:
 
-| Metrik | Hungarian Algorithm | or-tools.linear_solver 1.0 | or-tools.linear_solver 1.1
-|--------|--------|---------|
-| Mittelwert Zufriedenheit | 93.96 | 92.55 | 93.96
-| Minimum | 67 | 33 | 67
-| Maximum | 100 | 100 | 100
-| Standardabweichung | 8.27 | 11.35 | 7.62
-| Varianz | 68.41 | 128.82 | 58.04
-| Median | 100 | 100 | 100
+| Metrik | Hungarian Algorithm | or-tools.linear_solver 1.0 | or-tools.linear_solver 1.1 |
+|--------|--------|---------|---------|
+| Mittelwert Zufriedenheit | 93.96 | 92.55 | 93.96 |
+| Minimum | 67 | 33 | 67 |
+| Maximum | 100 | 100 | 100 |
+| Standardabweichung | 8.27 | 11.35 | 7.62 |
+| Varianz | 68.41 | 128.82 | 58.04 |
+| Median | 100 | 100 | 100 |
 
 **Probleme:**  
 Es wurden keine Probleme festgestellt
