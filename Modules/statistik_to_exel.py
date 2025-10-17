@@ -221,7 +221,7 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
         
         metriks = statistik_summary['solo_stat']
         
-        logger.warning(metriks)
+        logger.info(metriks)
         
         fig, ax = plt.subplots(figsize = (10, 4))
         
@@ -229,7 +229,7 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
         
         met_df = pd.DataFrame.from_dict(data= metriks, orient= 'index', columns= ['stat']).reset_index(names= 'metrik')
         
-        logger.warning(met_df)
+        logger.info(met_df)
         
         tabl = plt.table(cellText= met_df.values, colLabels= met_df.columns, cellLoc= 'center', loc= 'center', colWidths=[0.18]*len(met_df.columns))
         tabl.scale(1.3, 1.3)
@@ -264,150 +264,4 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
 
         plt.close('all')
     
-    # линейный график для удовлетворенности в каждом семестре
-    # plt.figure(figsize= (10, 6))
-        
-        # plt.plot(x_axis, y_axis, marker = 'o', color='#4F81BD', linewidth=2, markersize=8, markeredgecolor='white', markeredgewidth=1.5)
-        
-        # plt.yticks([val for val in semestrs_satisfaction.index])
-        
-        # for x, y in zip(x_axis, y_axis):
-            
-        #     plt.text(x = x - 0.5, y = y + 0.03, s = f"{int(x)}%")
-            
-        # font_label = {'family' : 'serif', 'color' : 'red', 'size' : 15}
-        # font_title = {'family' : 'serif', 'color' : '#4F81BD', 'size' : 20}
-        
-        # plt.xlabel('Satisfaction(%)', fontdict= font_label)
-        # plt.ylabel('Semestr', fontdict= font_label)
-        
-        # plt.title('Semestrs mean satisfaction', fontdict= font_title)
-        
-        # plt.grid(axis= 'y', linestyle = '--', color = 'red', linewidth = 1)
-        
-        # plt.gca().xaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{int(x)}%"))
-        
-        # plt.gca().set_facecolor("#f9f9f9")
-        
-        # plt.tight_layout()
-        # pdf.savefig()
-        # plt.close()
     
-    
-    
-    
-    
-    
-    
-    # def personal_scatter(pdf : PdfPages):
-        
-    #     personal_stat = statistik_summary['personal']
-    
-    #     x_axis = list(range(0, len(personal_stat['student'])))
-    #     y_axis = personal_stat['total_satisfaction']
-        
-    #     plt.figure(figsize= (10, 6))
-        
-    #     plt.scatter(x= x_axis, y= y_axis, c = y_axis, cmap= plt.cm.Blues)
-    #     plt.colorbar(label = 'Satisfaction(%)')
-        
-    #     plt.gca().yaxis.set_major_formatter(FuncFormatter(lambda y, _ : f"{int(y)}%"))
-        
-    #     plt.tight_layout()
-    #     plt.show()
-    
-    # sports = statistik_summary['sports_satisfaction']
-    
-    # x_axis = list(sports.index)
-    # y_axis = list(sports['mean_satisfaction'])
-    
-    # plt.plot(x_axis, y_axis, marker = 'o', lw = 1, ls = '-', color = 'b')
-    
-    # font1 = {'family':'serif','color':'blue','size':20}
-    # font2 = {'family':'serif','color':'darkred','size':15}
-    
-    # plt.xlabel('Sports', fontdict= font2)
-    # plt.ylabel('Satisfaction', fontdict= font2)
-    
-    # plt.title('Sports satisfaction data', fontdict= font1)
-    
-    # plt.grid(color = 'green', linestyle = '--', linewidth = 0.5)
-    
-    # plt.show()
-    
-
-
-
-
-
-
-
-
-
-
-# import pandas as pd
-# import logging
-# from .config import OUTPUT_STAT_FILE
-# from openpyxl import load_workbook
-# from openpyxl.chart import BarChart, Reference
-# from openpyxl.chart.label import DataLabelList
-
-
-
-# logger = logging.getLogger(__name__)
-
-
-# def stat_to_exel(statistik_summary : dict):
-    
-#     with pd.ExcelWriter(OUTPUT_STAT_FILE, engine= 'openpyxl', mode= 'w') as writer:
-        
-#         # statistik_summary['personal'].to_excel(writer, sheet_name = 'personal', index = False)
-#         statistik_summary['sports_satisfaction'].to_excel(writer, sheet_name = 'sports', index = True, index_label = 'Sport')
-#         # statistik_summary['semestrs_satisfaction'].to_excel(writer, sheet_name = 'semestrs', index = True, index_label = 'Semestr')
-#         # dist = statistik_summary['satisfaction_distribution']
-        
-#         # if isinstance(dist, pd.Series):
-#         #     dist_df = dist.rename('count').reset_index().rename(columns= {'index' : 'range'})
-        
-#         # else:
-#         #     dist_df = dist
-        
-#         # dist_df.to_excel(writer, sheet_name= 'distribution', index= False)
-    
-    
-#     wb = load_workbook(OUTPUT_STAT_FILE)
-#     # ws_personal = wb['personal']
-#     ws_sports = wb['sports']
-#     # ws_semestrs = wb['semestrs']
-#     # ws_dist = wb['distribution']
-    
-#     n_rows = ws_sports.max_row
-    
-#     cats = Reference(ws_sports, min_col= 1, min_row= 2, max_row= n_rows)
-#     val = Reference(ws_sports, min_col= 2, min_row= 2, max_row= n_rows)
-    
-#     chart = BarChart()
-#     chart.type = 'col'
-#     chart.title = 'Mean sports satisfaction'
-#     chart.y_axis.title = 'satisfaction'
-#     chart.x_axis.title = 'sport'
-    
-    
-    
-    
-#     chart.add_data(val, titles_from_data= True)
-#     chart.set_categories(cats)
-    
-    
-    
-#     chart.dLbls = DataLabelList()
-#     chart.dLbls.showVal = True
-    
-#     chart.width = 20
-#     chart.height = 13
-    
-    
-    
-#     ws_sports.add_chart(chart, 'A1')
-    
-#     wb.save(OUTPUT_STAT_FILE)

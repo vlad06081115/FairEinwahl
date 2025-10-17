@@ -43,3 +43,34 @@ Die Verarbeitung und Iteration im DataFrame über die Namen ist nicht vollständ
 **Ideen:**  
 Die Zufriedenheitsmetriken können direkt extrahiert werden;
 Implementiere einen Algorithmus, der die Verteilung direkt über drei Semester vornimmt, statt sie einzeln zu bearbeiten.
+
+
+### 2025-10-17
+**Was wurde gemacht:**  
+Verbesserte Zuordnung der Studierenden mit ortools.linear_solver, verteilt sie gleichzeitig auf alle Semester
+
+Allgemeine Optimierung des Algorithmus durch Verwendung von .to_numpy() (ndarray)
+
+**Warum:**  
+um den durchschnittlichen Zufriedenheitswert der Studierenden zu verbessern
+um die Zuordnung zuverlässiger und gerechter zu gestalten
+
+**Ergebnisse:**  
+Die durchschnittlichen Zufriedenheitswerte sind leicht gestiegen, während die Streuung (Standardabweichung, Varianz) deutlich abgenommen hat
+
+Statistik Hung. Alg. , or-tools 1.0, or-tools 1.1 nach der Änderung:
+
+| Metrik | Hungarian Algorithm | or-tools.linear_solver 1.0 | or-tools.linear_solver 1.1
+|--------|--------|---------|
+| Mittelwert Zufriedenheit | 93.96 | 92.55 | 93.96
+| Minimum | 67 | 33 | 67
+| Maximum | 100 | 100 | 100
+| Standardabweichung | 8.27 | 11.35 | 7.62
+| Varianz | 68.41 | 128.82 | 58.04
+| Median | 100 | 100 | 100
+
+**Probleme:**  
+Es wurden keine Probleme festgestellt
+
+**Ideen:**  
+Vereinfache die Berechnung der Statistik, sodass die statistischen Daten direkt nach der Zuordnung ausgegeben werden können

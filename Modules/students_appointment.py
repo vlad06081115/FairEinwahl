@@ -2,8 +2,6 @@ import logging
 from . import config
 import pandas as pd
 from .pref_to_sport import preferences_to_sports
-# from scipy.optimize import linear_sum_assignment
-
 from ortools.linear_solver import pywraplp
 
 logger = logging.getLogger(__name__)
@@ -23,7 +21,7 @@ def students_appointing(df : pd.DataFrame, programms : dict) -> dict:
     # dict with dataframes for every semestr
     semestrs_dataframes = {}
 
-    def fill_in_semestrs_dataframe(programms : dict):
+    def fill_in_semestrs_dataframe(programms : dict) -> None:
         for part, sports in programms.items():
             semestrs_dataframes[part] = pd.DataFrame(columns=sports)
 
@@ -37,212 +35,71 @@ def students_appointing(df : pd.DataFrame, programms : dict) -> dict:
     m1, m2, m3 = df.columns.get_loc('M-Präferenz 1'), df.columns.get_loc('M-Präferenz 2'), df.columns.get_loc('M-Präferenz 3')
     i1, i2, i3 = df.columns.get_loc('I-Präferenz 1'), df.columns.get_loc('I-Präferenz 2'), df.columns.get_loc('I-Präferenz 3')
 
+    solver = pywraplp.Solver.CreateSolver('SCIP')
 
-
-
-
-    for semestr, sports in programms.items():
+    pref_sport = {}
+    
+    x = {}
+    for row_idx, i in enumerate(data):
+        for s in programms.keys():
+            for c in programms[s]:
+                x[row_idx, s, c] = solver.IntVar(0, 1, f"x_{row_idx}_{s}_{c}")
         
-        solver = pywraplp.Solver.CreateSolver('SCIP')
-
-        x = {}
-        for i in data:
-            for s in sports:
-                x[i[nachname_idx], s] = solver.IntVar(0, 1, f"x_{i[nachname_idx]}_{s}")
-
-        for i in data:
-            solver.Add(sum(x[i[nachname_idx], s] for s in sports) == 1)
+        pref_sport[row_idx] = {
+            'm_pref' : preferences_to_sports([data[row_idx][m1], data[row_idx][m2], data[row_idx][m3]]),
+            'i_pref' : preferences_to_sports([data[row_idx][i1], data[row_idx][i2], data[row_idx][i3]])
+        }
+    
+    for row_idx, i in enumerate(data):
+        for s in programms.keys():
+            solver.Add(sum(x[row_idx, s, c] for c in programms[s]) == 1)
             
-        for s in sports:
-            solver.Add(sum(x[i[nachname_idx], s] for i in data) >= config.MIN_CAPACITY)
-            solver.Add(sum(x[i[nachname_idx], s] for i in data) <= config.MAX_CAPACITY)
 
-        objective = solver.Objective()
-        for i in data:
-            for s in sports:
+    for s in programms.keys():
+        for c in programms[s]:
+            solver.Add(sum(x[row_idx, s, c] for row_idx, i in enumerate(data)) >= config.MIN_CAPACITY)
+            solver.Add(sum(x[row_idx, s, c] for row_idx, i in enumerate(data)) <= config.MAX_CAPACITY)
+            
+    objective = solver.Objective()
+    for row_idx, i in enumerate(data):
+        for s in programms.keys():
+            for c in programms[s]:
                 
-                m_preferences = preferences_to_sports([i[m1], i[m2], i[m3]])
-                i_preferences = preferences_to_sports([i[i1], i[i2], i[i3]])
+                m_preferences = pref_sport[row_idx]['m_pref']
+                i_preferences = pref_sport[row_idx]['i_pref']
+
+                score = 0
                 
-                if s in m_preferences:
-                    objective.SetCoefficient(x[i[nachname_idx], s], 3 - m_preferences.index(s))
+                if c in m_preferences:
+                    score =  3 - m_preferences.index(c)
 
-                elif s in i_preferences:
-                    objective.SetCoefficient(x[i[nachname_idx], s], 3 - i_preferences.index(s))
+                elif c in i_preferences:
+                    score = 3 - i_preferences.index(c)
 
-        objective.SetMaximization()
+                
+                objective.SetCoefficient(x[row_idx, s, c], score)
 
-        status = solver.Solve()
+    objective.SetMaximization()
 
-        if status == pywraplp.Solver.OPTIMAL:
-            for i in data:
-                for s in sports:
-                    if x[i[nachname_idx], s].solution_value() > 0.5:
-                        semestrs_dataframes[semestr].loc[
-                            semestrs_dataframes[semestr][s].notna().sum(), s
-                        ] = norm(f"{norm(i[nachname_idx])} {norm(i[vorname_idx])}")
+    status = solver.Solve()
 
-    for semestr, schedule in semestrs_dataframes.items():
+    if status == pywraplp.Solver.OPTIMAL:
+        for row_idx, i in enumerate(data):
+            for s in programms.keys():
+                for c in programms[s]:    
+                    if x[row_idx, s, c].solution_value() > 0.5:
+                        
+                        semestrs_dataframes[s].loc[
+                            semestrs_dataframes[s][c].notna().sum(), c
+                        ] = f"{norm(data[row_idx][nachname_idx])} {norm(data[row_idx][vorname_idx])}"
+
+        logger.info(f"Succesfully appointed students!")
         
-        logger.info(f"{semestr}\n{schedule}")
+        for sem, table in semestrs_dataframes.items():
+            logger.debug(f"Table for {sem}:\n{table}")
+        
+    else:
+        logger.warning(f"Something went wrong!")
     
     return semestrs_dataframes
     
-    
-    
-    
-    
-    
-    
-    # # creating a list of all available sports
-    # def expanded_sports(sports_list: list):
-    #     expanded_sports_list = []
-
-    #     for sport in sports_list:
-    #         for i in range(config.MAX_CAPACITY):
-    #             expanded_sports_list.append(f"{sport}_{i+1}")
-
-    #     return expanded_sports_list
-
-    # def u_matrix(student, expanded_sports: list):
-
-    #     m_preferences = preferences_to_sports(
-    #         [
-    #             student["M-Präferenz 1"],
-    #             student["M-Präferenz 2"],
-    #             student["M-Präferenz 3"],
-    #         ]
-    #     )
-    #     i_preferences = preferences_to_sports(
-    #         [
-    #             student["I-Präferenz 1"],
-    #             student["I-Präferenz 2"],
-    #             student["I-Präferenz 3"],
-    #         ]
-    #     )
-        
-    #     row = []
-    #     for sport in expanded_sports:
-    #         sport = sport.split("_")[0]
-    #         if sport in m_preferences:
-    #             score_m = 3 - m_preferences.index(sport)
-    #         if sport in i_preferences:
-    #             score_i = 3 - i_preferences.index(sport)
-    #         if (sport not in m_preferences) and (sport not in i_preferences):
-    #             score = 0
-    #             row.append(score)
-    #             continue
-
-    #         if (sport in m_preferences) and (sport in i_preferences):
-    #             score = max(score_i, score_m)
-    #         elif sport in m_preferences:
-    #             score = score_m
-    #         elif sport in i_preferences:
-    #             score = score_i
-    #         row.append(score)
-        
-    #     return row
-    
-    
-
-    # def check_min_requirment(
-    #     row_col, semestr, U_matrix, expanded_sports_list, C_matrix
-    # ):
-    #     for sport in semestrs_dataframes[semestr].columns:
-    #         sport_capacity = semestrs_dataframes[semestr][sport].notna().sum()
-
-    #         if sport_capacity < config.MIN_CAPACITY:
-
-    #             needed = config.MIN_CAPACITY - sport_capacity
-
-    #             logger.info(
-    #                 f"{semestr}\n{semestrs_dataframes[semestr].notna().sum()}\n{semestrs_dataframes[semestr]}\nneeded: {needed}"
-    #             )
-
-    #             candidates = []
-    #             for r, c in row_col:
-    #                 current_sport = expanded_sports_list[c].split("_")[0]
-
-    #                 if current_sport == sport:
-    #                     continue
-
-    #                 score_now = U_matrix[r][c]
-    #                 score_sport = U_matrix[r][expanded_sports_list.index(f"{sport}_1")]
-
-    #                 delta = score_sport - score_now
-    #                 candidates.append(
-    #                     [r, current_sport, score_now, score_sport, delta, c]
-    #                 )
-
-    #             max_delta = -10
-    #             max_delta_index = []
-
-    #             for i, row in enumerate(candidates):
-    #                 if row[4] >= max_delta:
-    #                     max_delta = row[4]
-    #                     max_delta_index.append(i)
-
-    #             for i in range(needed):
-    #                 # add a student to needed sport
-                    
-    #                 student = candidates[max_delta_index[-1]][0]
-    #                 score_new = candidates[max_delta_index[-1]][3]
-
-    #                 semestrs_dataframes[semestr].loc[
-    #                     semestrs_dataframes[semestr][sport].notna().sum(), sport
-    #                 ] = f"{df.iloc[student]['Nachname']} {df.iloc[student]['Vorname']} : {score_new}"
-
-    #                 # delete student from old sport
-
-    #                 sport_col = candidates[max_delta_index[-1]][1]
-    #                 student_name = df.iloc[student]["Nachname"]
-    #                 score_old = C_matrix[student][candidates[max_delta_index[-1]][5]]
-    #                 mask = (
-    #                     semestrs_dataframes[semestr][sport_col]
-    #                     != f"{student_name} : {score_old}"
-    #                 )
-    #                 semestrs_dataframes[semestr][sport_col] = semestrs_dataframes[
-    #                     semestr
-    #                 ][sport_col][mask].reset_index(drop=True)
-
-    #                 candidates.pop(max_delta_index[-1])
-    #                 max_delta_index.pop(-1)
-                    
-
-    # def main():
-
-    #     fill_in_semestrs_dataframe(programms)
-
-    #     for semestr in programms.keys():
-    #         expanded_sports_list = expanded_sports(programms[semestr])
-    #         U = []
-    #         df.apply(
-    #             lambda student: U.append(u_matrix(student, expanded_sports_list)),
-    #             axis="columns",
-    #         )
-            
-    #         max_u = max(max(row) for row in U)
-    #         C = [[max_u - val for val in row] for row in U]
-
-    #         logger.info(f"students: {len(df)}, slots: {len(expanded_sports_list)}")
-    #         logger.info(f"U matrix rows: {len(U)}, U matrix cols: {len(U[0]) if U else 0}")
-            
-    #         row_ind, col_ind = linear_sum_assignment(C)
-            
-    #         assigned_rows = set(row_ind)
-    #         unassigned = [i for i in range(len(df)) if i not in assigned_rows]
-    #         logger.warning(f"UNASSIGNED STUDENTS COUNT: {len(unassigned)}, list: {unassigned}")
-            
-    #         for r, c in zip(row_ind, col_ind):
-    #             sport = expanded_sports_list[c].split("_")[0]
-    #             semestrs_dataframes[semestr].loc[
-    #                 semestrs_dataframes[semestr][sport].notna().sum(), sport
-    #             ] = norm(f"{df.iloc[r]['Nachname']} {df.iloc[r]['Vorname']}")
-                
-    #         check_min_requirment(
-    #             row_col=zip(row_ind, col_ind),
-    #             semestr=semestr,
-    #             U_matrix=U,
-    #             expanded_sports_list=expanded_sports_list,
-    #             C_matrix=C,
-    #         )

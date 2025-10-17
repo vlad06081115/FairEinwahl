@@ -1,333 +1,333 @@
-DEBUG line : 102 Modules.demand_calc 2025-10-17 16:50:54,424  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,326  : 
 Basketball: eff=62.37, floor=2, ceil=3
-DEBUG line : 102 Modules.demand_calc 2025-10-17 16:50:54,425  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,327  : 
 Volleyball: eff=81.03, floor=2, ceil=3
-DEBUG line : 102 Modules.demand_calc 2025-10-17 16:50:54,425  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,327  : 
 Fußball: eff=37.33, floor=1, ceil=2
-DEBUG line : 102 Modules.demand_calc 2025-10-17 16:50:54,425  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,327  : 
 Gymnastik/Tanz: eff=35.96, floor=1, ceil=2
-DEBUG line : 102 Modules.demand_calc 2025-10-17 16:50:54,426  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,327  : 
 Badminton: eff=83.76, floor=2, ceil=3
-DEBUG line : 102 Modules.demand_calc 2025-10-17 16:50:54,426  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,328  : 
 Gerätturnen: eff=16.84, floor=0, ceil=1
-DEBUG line : 102 Modules.demand_calc 2025-10-17 16:50:54,426  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,328  : 
 Leichtathletik: eff=38.70, floor=1, ceil=2
-DEBUG line : 108 Modules.demand_calc 2025-10-17 16:50:54,426  : 
+DEBUG line : 108 Modules.demand_calc 2025-10-17 20:27:05,328  : 
 Mean weight : , 2.196629213483146
-DEBUG line : 109 Modules.demand_calc 2025-10-17 16:50:54,426  : 
+DEBUG line : 109 Modules.demand_calc 2025-10-17 20:27:05,328  : 
 Anywhere count:, Counter({'Volleyball': 71, 'Badminton': 69, 'Basketball': 67, 'Fußball': 46, 'Leichtathletik': 46, 'Gymnastik/Tanz': 38, 'Gerätturnen': 19})
-DEBUG line : 110 Modules.demand_calc 2025-10-17 16:50:54,427  : 
+DEBUG line : 110 Modules.demand_calc 2025-10-17 20:27:05,328  : 
 Weighted count:, Counter({'Badminton': 184, 'Volleyball': 178, 'Basketball': 137, 'Leichtathletik': 85, 'Fußball': 82, 'Gymnastik/Tanz': 79, 'Gerätturnen': 37})
-DEBUG line : 111 Modules.demand_calc 2025-10-17 16:50:54,427  : 
+DEBUG line : 111 Modules.demand_calc 2025-10-17 20:27:05,329  : 
 Effective students:, {'Basketball': 62.36828644501279, 'Volleyball': 81.03324808184144, 'Fußball': 37.32992327365729, 'Gymnastik/Tanz': 35.96419437340153, 'Badminton': 83.76470588235294, 'Gerätturnen': 16.843989769820972, 'Leichtathletik': 38.69565217391305}
-DEBUG line : 112 Modules.demand_calc 2025-10-17 16:50:54,427  : 
+DEBUG line : 112 Modules.demand_calc 2025-10-17 20:27:05,329  : 
 Required groups:, {'Basketball': 2, 'Volleyball': 2, 'Fußball': 1, 'Gymnastik/Tanz': 1, 'Badminton': 2, 'Gerätturnen': 0, 'Leichtathletik': 1}
-DEBUG line : 113 Modules.demand_calc 2025-10-17 16:50:54,427  : 
+DEBUG line : 113 Modules.demand_calc 2025-10-17 20:27:05,329  : 
 sports in required groups - 9
-INFO line : 121 Modules.demand_calc 2025-10-17 16:50:54,427  : 
+INFO line : 121 Modules.demand_calc 2025-10-17 20:27:05,329  : 
 Final required_groups={'Basketball': 2, 'Volleyball': 2, 'Fußball': 1, 'Gymnastik/Tanz': 1, 'Badminton': 2, 'Gerätturnen': 0, 'Leichtathletik': 1}, total=9
-DEBUG line : 64 Modules.sem_building_model 2025-10-17 16:50:54,453  : 
+DEBUG line : 64 Modules.sem_building_model 2025-10-17 20:27:05,348  : 
 schedule - {11.1: {0: 'Leichtathletik', 1: 'Badminton', 2: 'Gymnastik/Tanz'}, 11.2: {0: 'Fußball', 1: 'Basketball', 2: 'Volleyball'}, 12.1: {0: 'Volleyball', 1: 'Basketball', 2: 'Badminton'}}
-CRITICAL line : 90 Modules.students_appointment 2025-10-17 16:50:54,526  : 
-11.1
-            Leichtathletik                 Badminton              Gymnastik/Tanz
-0           König Liam Rey           Berthold Jeremy                  Muster Max
-1            Möller Lennox              Fuchs Ludwig             Dehler Marietta
-2   Schuckay Tyler Philipp                Happ Felix                  Hardt Lisa
-3              Wagner Emma          Heil Mea Matilda               Holzhey Linda
-4         Wagner Josephine          Hessenmöller Ben          Marr Amelie Noelle
-5               Bätz Eddie      Hinz Selma Josephine          Messerschmidt Maya
-6          Fräntzki Amelie            Kellermann Tom        Müller Cecile Claire
-7           Handy Jonathan       Leinhas Eric Oliver                Salomo Lilly
-8              Lemuth Maja           Meinhold Helene              kaminski Ronak
-9         Möller Milo Noel   Recknagel Severin Sören            Baier Lisa Marie
-10         Musaeva Tanzila        Reich Emma Laureen           Bauerschmidt Lena
-11          Osterwald Erik             Riedl Lennart     Brothuhn Hannes Enxiang
-12          Schmidt Moritz  Rothämel Gianluca Martin             Drill Felicitas
-13            Schröder Ben          Schmeider Sophie             Hauck Katharina
-14         Thrän Mia Luise            Wähner Philipp  Heiligenstadt Larissa Lynn
-15            Schatt Maike          Frobenius Hennar   Knapp Vianne Marie Helene
-16          Weisheit Simon               Streve Luis              Lukinov Polina
-17                     NaN           Weißheit Emelie                  Mey Svenja
-18                     NaN          Anding Charlotte           Reis Tim Matthias
-19                     NaN             Eck Alexander          Zimmer Hanna Elise
-20                     NaN             Friedrich Tom                Danz Solveig
-21                     NaN        Hessemüller Hannes            Hofmann Amy-Lynn
-22                     NaN    Holland-Nell Karl Erik               Kaufmann Eric
-23                     NaN                  Jung Pia            Schettler Latoya
-24                     NaN         Kaminski Johannes                         NaN
-25                     NaN                Klee Tinke                         NaN
-26                     NaN               Knape Emily                         NaN
-27                     NaN               Kordi Ahmad                         NaN
-28                     NaN     Kössel Mick Christian                         NaN
-29                     NaN           Weinknecht Elia                         NaN
-CRITICAL line : 90 Modules.students_appointment 2025-10-17 16:50:54,529  : 
-11.2
-                    Fußball                  Basketball                Volleyball
-0            König Liam Rey                  Muster Max           Berthold Jeremy
-1           Meinhold Helene             Dehler Marietta                Happ Felix
-2             Möller Lennox                Fuchs Ludwig                Hardt Lisa
-3   Recknagel Severin Sören            Heil Mea Matilda          Hessenmöller Ben
-4          Frobenius Hennar        Müller Cecile Claire      Hinz Selma Josephine
-5            Lukinov Polina            Schmeider Sophie             Holzhey Linda
-6          Möller Milo Noel                 Wagner Emma            Kellermann Tom
-7         Reis Tim Matthias            Wagner Josephine       Leinhas Eric Oliver
-8              Schröder Ben            Baier Lisa Marie        Marr Amelie Noelle
-9               Streve Luis                  Bätz Eddie        Messerschmidt Maya
-10            Eck Alexander           Bauerschmidt Lena        Reich Emma Laureen
-11   Holland-Nell Karl Erik     Brothuhn Hannes Enxiang             Riedl Lennart
-12        Kaminski Johannes             Drill Felicitas  Rothämel Gianluca Martin
-13            Kaufmann Eric             Fräntzki Amelie              Salomo Lilly
-14              Kordi Ahmad              Handy Jonathan    Schuckay Tyler Philipp
-15    Kössel Mick Christian             Hauck Katharina            Wähner Philipp
-16             Schatt Maike  Heiligenstadt Larissa Lynn            kaminski Ronak
-17          Weinknecht Elia   Knapp Vianne Marie Helene           Musaeva Tanzila
-18           Weisheit Simon                 Lemuth Maja           Thrän Mia Luise
-19                      NaN                  Mey Svenja           Weißheit Emelie
-20                      NaN              Osterwald Erik        Zimmer Hanna Elise
-21                      NaN              Schmidt Moritz          Anding Charlotte
-22                      NaN                         NaN              Danz Solveig
-23                      NaN                         NaN             Friedrich Tom
-24                      NaN                         NaN        Hessemüller Hannes
-25                      NaN                         NaN          Hofmann Amy-Lynn
-26                      NaN                         NaN                  Jung Pia
-27                      NaN                         NaN                Klee Tinke
-28                      NaN                         NaN               Knape Emily
-29                      NaN                         NaN          Schettler Latoya
-CRITICAL line : 90 Modules.students_appointment 2025-10-17 16:50:54,533  : 
-12.1
-                    Volleyball               Basketball                  Badminton
-0                   Happ Felix               Muster Max            Berthold Jeremy
-1                   Hardt Lisa          Dehler Marietta           Hessenmöller Ben
-2                Holzhey Linda             Fuchs Ludwig       Hinz Selma Josephine
-3           Marr Amelie Noelle         Heil Mea Matilda             Kellermann Tom
-4           Messerschmidt Maya           König Liam Rey        Leinhas Eric Oliver
-5                Möller Lennox     Müller Cecile Claire            Meinhold Helene
-6           Reich Emma Laureen         Schmeider Sophie    Recknagel Severin Sören
-7                Riedl Lennart              Wagner Emma          Bauerschmidt Lena
-8     Rothämel Gianluca Martin         Wagner Josephine  Knapp Vianne Marie Helene
-9                 Salomo Lilly         Baier Lisa Marie             Lukinov Polina
-10      Schuckay Tyler Philipp               Bätz Eddie          Reis Tim Matthias
-11              Wähner Philipp  Brothuhn Hannes Enxiang               Schröder Ben
-12              kaminski Ronak         Frobenius Hennar                Streve Luis
-13             Drill Felicitas           Handy Jonathan            Weißheit Emelie
-14             Fräntzki Amelie               Mey Svenja           Anding Charlotte
-15             Hauck Katharina           Osterwald Erik               Danz Solveig
-16  Heiligenstadt Larissa Lynn           Schmidt Moritz              Eck Alexander
-17                 Lemuth Maja                      NaN              Friedrich Tom
-18            Möller Milo Noel                      NaN         Hessemüller Hannes
-19             Musaeva Tanzila                      NaN           Hofmann Amy-Lynn
-20             Thrän Mia Luise                      NaN     Holland-Nell Karl Erik
-21          Zimmer Hanna Elise                      NaN                   Jung Pia
-22                Schatt Maike                      NaN          Kaminski Johannes
-23            Schettler Latoya                      NaN              Kaufmann Eric
-24                         NaN                      NaN                 Klee Tinke
-25                         NaN                      NaN                Knape Emily
-26                         NaN                      NaN                Kordi Ahmad
-27                         NaN                      NaN      Kössel Mick Christian
-28                         NaN                      NaN            Weinknecht Elia
-29                         NaN                      NaN             Weisheit Simon
-INFO line : 36 __main__ 2025-10-17 16:50:54,539  : 
+INFO line : 96 Modules.students_appointment 2025-10-17 20:27:05,409  : 
+Succesfully appointed students!
+DEBUG line : 99 Modules.students_appointment 2025-10-17 20:27:05,413  : 
+Table for 11.1:
+             Leichtathletik                 Badminton              Gymnastik/Tanz
+0                happ felix           berthold jeremy                  muster max
+1          hessenmöller ben              fuchs ludwig             dehler marietta
+2            könig liam rey      hinz selma josephine                  hardt lisa
+3       leinhas eric oliver            kellermann tom            heil mea matilda
+4             möller lennox           meinhold helene               holzhey linda
+5   recknagel severin sören  rothämel gianluca martin          marr amelie noelle
+6             riedl lennart          schmeider sophie          messerschmidt maya
+7               wagner emma    schuckay tyler philipp        müller cecile claire
+8                bätz eddie          wagner josephine          reich emma laureen
+9           fräntzki amelie            wähner philipp                salomo lilly
+10           handy jonathan         bauerschmidt lena              kaminski ronak
+11              lemuth maja   brothuhn hannes enxiang            baier lisa marie
+12         möller milo noel          frobenius hennar             drill felicitas
+13          musaeva tanzila         reis tim matthias             hauck katharina
+14           osterwald erik            schmidt moritz  heiligenstadt larissa lynn
+15              streve luis              schröder ben   knapp vianne marie helene
+16          thrän mia luise           weißheit emelie              lukinov polina
+17             schatt maike          anding charlotte                  mey svenja
+18           weisheit simon              danz solveig          zimmer hanna elise
+19                      NaN             eck alexander            hofmann amy-lynn
+20                      NaN             friedrich tom               kaufmann eric
+21                      NaN        hessemüller hannes            schettler latoya
+22                      NaN    holland-nell karl erik                         NaN
+23                      NaN                  jung pia                         NaN
+24                      NaN         kaminski johannes                         NaN
+25                      NaN                klee tinke                         NaN
+26                      NaN               knape emily                         NaN
+27                      NaN               kordi ahmad                         NaN
+28                      NaN     kössel mick christian                         NaN
+29                      NaN           weinknecht elia                         NaN
+DEBUG line : 99 Modules.students_appointment 2025-10-17 20:27:05,417  : 
+Table for 11.2:
+                     Fußball                  Basketball              Volleyball
+0       hinz selma josephine                  muster max              happ felix
+1             könig liam rey             berthold jeremy              hardt lisa
+2            meinhold helene             dehler marietta        hessenmöller ben
+3    recknagel severin sören                fuchs ludwig           holzhey linda
+4   rothämel gianluca martin            heil mea matilda          kellermann tom
+5                wagner emma        müller cecile claire     leinhas eric oliver
+6           frobenius hennar            schmeider sophie      marr amelie noelle
+7             lukinov polina            wagner josephine      messerschmidt maya
+8           möller milo noel            baier lisa marie           möller lennox
+9          reis tim matthias                  bätz eddie      reich emma laureen
+10              schröder ben     brothuhn hannes enxiang           riedl lennart
+11               streve luis              handy jonathan            salomo lilly
+12             eck alexander  heiligenstadt larissa lynn  schuckay tyler philipp
+13    holland-nell karl erik   knapp vianne marie helene          wähner philipp
+14         kaminski johannes                 lemuth maja          kaminski ronak
+15             kaufmann eric                  mey svenja       bauerschmidt lena
+16               kordi ahmad              osterwald erik         drill felicitas
+17     kössel mick christian              schmidt moritz         fräntzki amelie
+18              schatt maike                danz solveig         hauck katharina
+19           weinknecht elia               friedrich tom         musaeva tanzila
+20            weisheit simon                         NaN         thrän mia luise
+21                       NaN                         NaN         weißheit emelie
+22                       NaN                         NaN      zimmer hanna elise
+23                       NaN                         NaN        anding charlotte
+24                       NaN                         NaN      hessemüller hannes
+25                       NaN                         NaN        hofmann amy-lynn
+26                       NaN                         NaN                jung pia
+27                       NaN                         NaN              klee tinke
+28                       NaN                         NaN             knape emily
+29                       NaN                         NaN        schettler latoya
+DEBUG line : 99 Modules.students_appointment 2025-10-17 20:27:05,422  : 
+Table for 12.1:
+                    Volleyball               Basketball                Badminton
+0              berthold jeremy               muster max         hessenmöller ben
+1                   happ felix          dehler marietta          meinhold helene
+2                   hardt lisa             fuchs ludwig  recknagel severin sören
+3         hinz selma josephine         heil mea matilda   schuckay tyler philipp
+4                holzhey linda           könig liam rey           wähner philipp
+5               kellermann tom     müller cecile claire        bauerschmidt lena
+6          leinhas eric oliver         schmeider sophie              lemuth maja
+7           marr amelie noelle         wagner josephine           lukinov polina
+8           messerschmidt maya         baier lisa marie         möller milo noel
+9                möller lennox               bätz eddie          musaeva tanzila
+10          reich emma laureen  brothuhn hannes enxiang        reis tim matthias
+11               riedl lennart         frobenius hennar             schröder ben
+12    rothämel gianluca martin           handy jonathan              streve luis
+13                salomo lilly               mey svenja          weißheit emelie
+14                 wagner emma           osterwald erik         anding charlotte
+15              kaminski ronak           schmidt moritz             danz solveig
+16             drill felicitas                      NaN            eck alexander
+17             fräntzki amelie                      NaN            friedrich tom
+18             hauck katharina                      NaN       hessemüller hannes
+19  heiligenstadt larissa lynn                      NaN         hofmann amy-lynn
+20   knapp vianne marie helene                      NaN   holland-nell karl erik
+21             thrän mia luise                      NaN                 jung pia
+22          zimmer hanna elise                      NaN        kaminski johannes
+23                schatt maike                      NaN            kaufmann eric
+24            schettler latoya                      NaN               klee tinke
+25              weisheit simon                      NaN              knape emily
+26                         NaN                      NaN              kordi ahmad
+27                         NaN                      NaN    kössel mick christian
+28                         NaN                      NaN          weinknecht elia
+INFO line : 36 __main__ 2025-10-17 20:27:05,430  : 
 11.1 
-Leichtathletik    17
+Leichtathletik    19
 Badminton         30
-Gymnastik/Tanz    24
+Gymnastik/Tanz    22
 dtype: int64 
-            Leichtathletik                 Badminton              Gymnastik/Tanz
-0           König Liam Rey           Berthold Jeremy                  Muster Max
-1            Möller Lennox              Fuchs Ludwig             Dehler Marietta
-2   Schuckay Tyler Philipp                Happ Felix                  Hardt Lisa
-3              Wagner Emma          Heil Mea Matilda               Holzhey Linda
-4         Wagner Josephine          Hessenmöller Ben          Marr Amelie Noelle
-5               Bätz Eddie      Hinz Selma Josephine          Messerschmidt Maya
-6          Fräntzki Amelie            Kellermann Tom        Müller Cecile Claire
-7           Handy Jonathan       Leinhas Eric Oliver                Salomo Lilly
-8              Lemuth Maja           Meinhold Helene              kaminski Ronak
-9         Möller Milo Noel   Recknagel Severin Sören            Baier Lisa Marie
-10         Musaeva Tanzila        Reich Emma Laureen           Bauerschmidt Lena
-11          Osterwald Erik             Riedl Lennart     Brothuhn Hannes Enxiang
-12          Schmidt Moritz  Rothämel Gianluca Martin             Drill Felicitas
-13            Schröder Ben          Schmeider Sophie             Hauck Katharina
-14         Thrän Mia Luise            Wähner Philipp  Heiligenstadt Larissa Lynn
-15            Schatt Maike          Frobenius Hennar   Knapp Vianne Marie Helene
-16          Weisheit Simon               Streve Luis              Lukinov Polina
-17                     NaN           Weißheit Emelie                  Mey Svenja
-18                     NaN          Anding Charlotte           Reis Tim Matthias
-19                     NaN             Eck Alexander          Zimmer Hanna Elise
-20                     NaN             Friedrich Tom                Danz Solveig
-21                     NaN        Hessemüller Hannes            Hofmann Amy-Lynn
-22                     NaN    Holland-Nell Karl Erik               Kaufmann Eric
-23                     NaN                  Jung Pia            Schettler Latoya
-24                     NaN         Kaminski Johannes                         NaN
-25                     NaN                Klee Tinke                         NaN
-26                     NaN               Knape Emily                         NaN
-27                     NaN               Kordi Ahmad                         NaN
-28                     NaN     Kössel Mick Christian                         NaN
-29                     NaN           Weinknecht Elia                         NaN
-INFO line : 36 __main__ 2025-10-17 16:50:54,543  : 
+             Leichtathletik                 Badminton              Gymnastik/Tanz
+0                happ felix           berthold jeremy                  muster max
+1          hessenmöller ben              fuchs ludwig             dehler marietta
+2            könig liam rey      hinz selma josephine                  hardt lisa
+3       leinhas eric oliver            kellermann tom            heil mea matilda
+4             möller lennox           meinhold helene               holzhey linda
+5   recknagel severin sören  rothämel gianluca martin          marr amelie noelle
+6             riedl lennart          schmeider sophie          messerschmidt maya
+7               wagner emma    schuckay tyler philipp        müller cecile claire
+8                bätz eddie          wagner josephine          reich emma laureen
+9           fräntzki amelie            wähner philipp                salomo lilly
+10           handy jonathan         bauerschmidt lena              kaminski ronak
+11              lemuth maja   brothuhn hannes enxiang            baier lisa marie
+12         möller milo noel          frobenius hennar             drill felicitas
+13          musaeva tanzila         reis tim matthias             hauck katharina
+14           osterwald erik            schmidt moritz  heiligenstadt larissa lynn
+15              streve luis              schröder ben   knapp vianne marie helene
+16          thrän mia luise           weißheit emelie              lukinov polina
+17             schatt maike          anding charlotte                  mey svenja
+18           weisheit simon              danz solveig          zimmer hanna elise
+19                      NaN             eck alexander            hofmann amy-lynn
+20                      NaN             friedrich tom               kaufmann eric
+21                      NaN        hessemüller hannes            schettler latoya
+22                      NaN    holland-nell karl erik                         NaN
+23                      NaN                  jung pia                         NaN
+24                      NaN         kaminski johannes                         NaN
+25                      NaN                klee tinke                         NaN
+26                      NaN               knape emily                         NaN
+27                      NaN               kordi ahmad                         NaN
+28                      NaN     kössel mick christian                         NaN
+29                      NaN           weinknecht elia                         NaN
+INFO line : 36 __main__ 2025-10-17 20:27:05,434  : 
 11.2 
-Fußball       19
-Basketball    22
+Fußball       21
+Basketball    20
 Volleyball    30
 dtype: int64 
-                    Fußball                  Basketball                Volleyball
-0            König Liam Rey                  Muster Max           Berthold Jeremy
-1           Meinhold Helene             Dehler Marietta                Happ Felix
-2             Möller Lennox                Fuchs Ludwig                Hardt Lisa
-3   Recknagel Severin Sören            Heil Mea Matilda          Hessenmöller Ben
-4          Frobenius Hennar        Müller Cecile Claire      Hinz Selma Josephine
-5            Lukinov Polina            Schmeider Sophie             Holzhey Linda
-6          Möller Milo Noel                 Wagner Emma            Kellermann Tom
-7         Reis Tim Matthias            Wagner Josephine       Leinhas Eric Oliver
-8              Schröder Ben            Baier Lisa Marie        Marr Amelie Noelle
-9               Streve Luis                  Bätz Eddie        Messerschmidt Maya
-10            Eck Alexander           Bauerschmidt Lena        Reich Emma Laureen
-11   Holland-Nell Karl Erik     Brothuhn Hannes Enxiang             Riedl Lennart
-12        Kaminski Johannes             Drill Felicitas  Rothämel Gianluca Martin
-13            Kaufmann Eric             Fräntzki Amelie              Salomo Lilly
-14              Kordi Ahmad              Handy Jonathan    Schuckay Tyler Philipp
-15    Kössel Mick Christian             Hauck Katharina            Wähner Philipp
-16             Schatt Maike  Heiligenstadt Larissa Lynn            kaminski Ronak
-17          Weinknecht Elia   Knapp Vianne Marie Helene           Musaeva Tanzila
-18           Weisheit Simon                 Lemuth Maja           Thrän Mia Luise
-19                      NaN                  Mey Svenja           Weißheit Emelie
-20                      NaN              Osterwald Erik        Zimmer Hanna Elise
-21                      NaN              Schmidt Moritz          Anding Charlotte
-22                      NaN                         NaN              Danz Solveig
-23                      NaN                         NaN             Friedrich Tom
-24                      NaN                         NaN        Hessemüller Hannes
-25                      NaN                         NaN          Hofmann Amy-Lynn
-26                      NaN                         NaN                  Jung Pia
-27                      NaN                         NaN                Klee Tinke
-28                      NaN                         NaN               Knape Emily
-29                      NaN                         NaN          Schettler Latoya
-INFO line : 36 __main__ 2025-10-17 16:50:54,547  : 
+                     Fußball                  Basketball              Volleyball
+0       hinz selma josephine                  muster max              happ felix
+1             könig liam rey             berthold jeremy              hardt lisa
+2            meinhold helene             dehler marietta        hessenmöller ben
+3    recknagel severin sören                fuchs ludwig           holzhey linda
+4   rothämel gianluca martin            heil mea matilda          kellermann tom
+5                wagner emma        müller cecile claire     leinhas eric oliver
+6           frobenius hennar            schmeider sophie      marr amelie noelle
+7             lukinov polina            wagner josephine      messerschmidt maya
+8           möller milo noel            baier lisa marie           möller lennox
+9          reis tim matthias                  bätz eddie      reich emma laureen
+10              schröder ben     brothuhn hannes enxiang           riedl lennart
+11               streve luis              handy jonathan            salomo lilly
+12             eck alexander  heiligenstadt larissa lynn  schuckay tyler philipp
+13    holland-nell karl erik   knapp vianne marie helene          wähner philipp
+14         kaminski johannes                 lemuth maja          kaminski ronak
+15             kaufmann eric                  mey svenja       bauerschmidt lena
+16               kordi ahmad              osterwald erik         drill felicitas
+17     kössel mick christian              schmidt moritz         fräntzki amelie
+18              schatt maike                danz solveig         hauck katharina
+19           weinknecht elia               friedrich tom         musaeva tanzila
+20            weisheit simon                         NaN         thrän mia luise
+21                       NaN                         NaN         weißheit emelie
+22                       NaN                         NaN      zimmer hanna elise
+23                       NaN                         NaN        anding charlotte
+24                       NaN                         NaN      hessemüller hannes
+25                       NaN                         NaN        hofmann amy-lynn
+26                       NaN                         NaN                jung pia
+27                       NaN                         NaN              klee tinke
+28                       NaN                         NaN             knape emily
+29                       NaN                         NaN        schettler latoya
+INFO line : 36 __main__ 2025-10-17 20:27:05,438  : 
 12.1 
-Volleyball    24
-Basketball    17
-Badminton     30
+Volleyball    26
+Basketball    16
+Badminton     29
 dtype: int64 
-                    Volleyball               Basketball                  Badminton
-0                   Happ Felix               Muster Max            Berthold Jeremy
-1                   Hardt Lisa          Dehler Marietta           Hessenmöller Ben
-2                Holzhey Linda             Fuchs Ludwig       Hinz Selma Josephine
-3           Marr Amelie Noelle         Heil Mea Matilda             Kellermann Tom
-4           Messerschmidt Maya           König Liam Rey        Leinhas Eric Oliver
-5                Möller Lennox     Müller Cecile Claire            Meinhold Helene
-6           Reich Emma Laureen         Schmeider Sophie    Recknagel Severin Sören
-7                Riedl Lennart              Wagner Emma          Bauerschmidt Lena
-8     Rothämel Gianluca Martin         Wagner Josephine  Knapp Vianne Marie Helene
-9                 Salomo Lilly         Baier Lisa Marie             Lukinov Polina
-10      Schuckay Tyler Philipp               Bätz Eddie          Reis Tim Matthias
-11              Wähner Philipp  Brothuhn Hannes Enxiang               Schröder Ben
-12              kaminski Ronak         Frobenius Hennar                Streve Luis
-13             Drill Felicitas           Handy Jonathan            Weißheit Emelie
-14             Fräntzki Amelie               Mey Svenja           Anding Charlotte
-15             Hauck Katharina           Osterwald Erik               Danz Solveig
-16  Heiligenstadt Larissa Lynn           Schmidt Moritz              Eck Alexander
-17                 Lemuth Maja                      NaN              Friedrich Tom
-18            Möller Milo Noel                      NaN         Hessemüller Hannes
-19             Musaeva Tanzila                      NaN           Hofmann Amy-Lynn
-20             Thrän Mia Luise                      NaN     Holland-Nell Karl Erik
-21          Zimmer Hanna Elise                      NaN                   Jung Pia
-22                Schatt Maike                      NaN          Kaminski Johannes
-23            Schettler Latoya                      NaN              Kaufmann Eric
-24                         NaN                      NaN                 Klee Tinke
-25                         NaN                      NaN                Knape Emily
-26                         NaN                      NaN                Kordi Ahmad
-27                         NaN                      NaN      Kössel Mick Christian
-28                         NaN                      NaN            Weinknecht Elia
-29                         NaN                      NaN             Weisheit Simon
-DEBUG line : 228 Modules.statistik_calc 2025-10-17 16:50:55,620  : 
-{'muster max': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'berthold jeremy': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'dehler marietta': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'fuchs ludwig': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'happ felix': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'hardt lisa': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'heil mea matilda': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'hessenmöller ben': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'hinz selma josephine': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'holzhey linda': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'kellermann tom': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'könig liam rey': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Basketball'}, 'leinhas eric oliver': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'marr amelie noelle': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'meinhold helene': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'messerschmidt maya': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'möller lennox': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'müller cecile claire': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'recknagel severin sören': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'reich emma laureen': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'riedl lennart': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'rothämel gianluca martin': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'salomo lilly': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'schmeider sophie': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'schuckay tyler philipp': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'wagner emma': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'wagner josephine': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'wähner philipp': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'kaminski ronak': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'baier lisa marie': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'bätz eddie': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'bauerschmidt lena': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Badminton'}, 'brothuhn hannes enxiang': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'drill felicitas': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'fräntzki amelie': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'frobenius hennar': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Basketball'}, 'handy jonathan': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'hauck katharina': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'heiligenstadt larissa lynn': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'knapp vianne marie helene': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Badminton'}, 'lemuth maja': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'lukinov polina': {11.1: 'Gymnastik/Tanz', 11.2: 'Fußball', 12.1: 'Badminton'}, 'mey svenja': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'möller milo noel': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'musaeva tanzila': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'osterwald erik': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'reis tim matthias': {11.1: 'Gymnastik/Tanz', 11.2: 'Fußball', 12.1: 'Badminton'}, 'schmidt moritz': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'schröder ben': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Badminton'}, 'streve luis': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'thrän mia luise': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'weißheit emelie': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'zimmer hanna elise': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'anding charlotte': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'danz solveig': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'eck alexander': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'friedrich tom': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'hessemüller hannes': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'hofmann amy-lynn': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'holland-nell karl erik': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'jung pia': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'kaminski johannes': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'kaufmann eric': {11.1: 'Gymnastik/Tanz', 11.2: 'Fußball', 12.1: 'Badminton'}, 'klee tinke': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'knape emily': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'kordi ahmad': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'kössel mick christian': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'schatt maike': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'schettler latoya': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'weinknecht elia': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'weisheit simon': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Badminton'}}
-INFO line : 140 Modules.statistik_calc 2025-10-17 16:50:55,657  : 
+                    Volleyball               Basketball                Badminton
+0              berthold jeremy               muster max         hessenmöller ben
+1                   happ felix          dehler marietta          meinhold helene
+2                   hardt lisa             fuchs ludwig  recknagel severin sören
+3         hinz selma josephine         heil mea matilda   schuckay tyler philipp
+4                holzhey linda           könig liam rey           wähner philipp
+5               kellermann tom     müller cecile claire        bauerschmidt lena
+6          leinhas eric oliver         schmeider sophie              lemuth maja
+7           marr amelie noelle         wagner josephine           lukinov polina
+8           messerschmidt maya         baier lisa marie         möller milo noel
+9                möller lennox               bätz eddie          musaeva tanzila
+10          reich emma laureen  brothuhn hannes enxiang        reis tim matthias
+11               riedl lennart         frobenius hennar             schröder ben
+12    rothämel gianluca martin           handy jonathan              streve luis
+13                salomo lilly               mey svenja          weißheit emelie
+14                 wagner emma           osterwald erik         anding charlotte
+15              kaminski ronak           schmidt moritz             danz solveig
+16             drill felicitas                      NaN            eck alexander
+17             fräntzki amelie                      NaN            friedrich tom
+18             hauck katharina                      NaN       hessemüller hannes
+19  heiligenstadt larissa lynn                      NaN         hofmann amy-lynn
+20   knapp vianne marie helene                      NaN   holland-nell karl erik
+21             thrän mia luise                      NaN                 jung pia
+22          zimmer hanna elise                      NaN        kaminski johannes
+23                schatt maike                      NaN            kaufmann eric
+24            schettler latoya                      NaN               klee tinke
+25              weisheit simon                      NaN              knape emily
+26                         NaN                      NaN              kordi ahmad
+27                         NaN                      NaN    kössel mick christian
+28                         NaN                      NaN          weinknecht elia
+DEBUG line : 228 Modules.statistik_calc 2025-10-17 20:27:06,334  : 
+{'muster max': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'berthold jeremy': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'dehler marietta': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'fuchs ludwig': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'happ felix': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'hardt lisa': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'heil mea matilda': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'hessenmöller ben': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'hinz selma josephine': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'holzhey linda': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'kellermann tom': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'könig liam rey': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Basketball'}, 'leinhas eric oliver': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'marr amelie noelle': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'meinhold helene': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'messerschmidt maya': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'möller lennox': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'müller cecile claire': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'recknagel severin sören': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Badminton'}, 'reich emma laureen': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'riedl lennart': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'rothämel gianluca martin': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'salomo lilly': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'schmeider sophie': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'schuckay tyler philipp': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'wagner emma': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'wagner josephine': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'wähner philipp': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'kaminski ronak': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'baier lisa marie': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'bätz eddie': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'bauerschmidt lena': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'brothuhn hannes enxiang': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'drill felicitas': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'fräntzki amelie': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'frobenius hennar': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Basketball'}, 'handy jonathan': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'hauck katharina': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'heiligenstadt larissa lynn': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'knapp vianne marie helene': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'lemuth maja': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Badminton'}, 'lukinov polina': {11.1: 'Gymnastik/Tanz', 11.2: 'Fußball', 12.1: 'Badminton'}, 'mey svenja': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'möller milo noel': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Badminton'}, 'musaeva tanzila': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'osterwald erik': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'reis tim matthias': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'schmidt moritz': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'schröder ben': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'streve luis': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Badminton'}, 'thrän mia luise': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'weißheit emelie': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'zimmer hanna elise': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'anding charlotte': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'danz solveig': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Badminton'}, 'eck alexander': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'friedrich tom': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Badminton'}, 'hessemüller hannes': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'hofmann amy-lynn': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'holland-nell karl erik': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'jung pia': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'kaminski johannes': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'kaufmann eric': {11.1: 'Gymnastik/Tanz', 11.2: 'Fußball', 12.1: 'Badminton'}, 'klee tinke': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'knape emily': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'kordi ahmad': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'kössel mick christian': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'schatt maike': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'schettler latoya': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'weinknecht elia': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'weisheit simon': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Volleyball'}}
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,374  : 
 semestr --> 11.2
 sport --> Basketball
-['muster max', 'dehler marietta', 'fuchs ludwig', 'heil mea matilda', 'müller cecile claire', 'schmeider sophie', 'wagner emma', 'wagner josephine', 'baier lisa marie', 'bätz eddie', 'bauerschmidt lena', 'brothuhn hannes enxiang', 'drill felicitas', 'fräntzki amelie', 'handy jonathan', 'hauck katharina', 'heiligenstadt larissa lynn', 'knapp vianne marie helene', 'lemuth maja', 'mey svenja', 'osterwald erik', 'schmidt moritz']
-len --> 22
-mean satisfaction - 84.95454545454545
-INFO line : 140 Modules.statistik_calc 2025-10-17 16:50:55,658  : 
+['muster max', 'berthold jeremy', 'dehler marietta', 'fuchs ludwig', 'heil mea matilda', 'müller cecile claire', 'schmeider sophie', 'wagner josephine', 'baier lisa marie', 'bätz eddie', 'brothuhn hannes enxiang', 'handy jonathan', 'heiligenstadt larissa lynn', 'knapp vianne marie helene', 'lemuth maja', 'mey svenja', 'osterwald erik', 'schmidt moritz', 'danz solveig', 'friedrich tom']
+len --> 20
+mean satisfaction - 90.1
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,375  : 
 semestr --> 12.1
 sport --> Basketball
-['muster max', 'dehler marietta', 'fuchs ludwig', 'heil mea matilda', 'könig liam rey', 'müller cecile claire', 'schmeider sophie', 'wagner emma', 'wagner josephine', 'baier lisa marie', 'bätz eddie', 'brothuhn hannes enxiang', 'frobenius hennar', 'handy jonathan', 'mey svenja', 'osterwald erik', 'schmidt moritz']
-len --> 17
-mean satisfaction - 90.23529411764706
-INFO line : 140 Modules.statistik_calc 2025-10-17 16:50:55,659  : 
+['muster max', 'dehler marietta', 'fuchs ludwig', 'heil mea matilda', 'könig liam rey', 'müller cecile claire', 'schmeider sophie', 'wagner josephine', 'baier lisa marie', 'bätz eddie', 'brothuhn hannes enxiang', 'frobenius hennar', 'handy jonathan', 'mey svenja', 'osterwald erik', 'schmidt moritz']
+len --> 16
+mean satisfaction - 95.875
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,377  : 
 semestr --> 11.2
 sport --> Volleyball
-['berthold jeremy', 'happ felix', 'hardt lisa', 'hessenmöller ben', 'hinz selma josephine', 'holzhey linda', 'kellermann tom', 'leinhas eric oliver', 'marr amelie noelle', 'messerschmidt maya', 'reich emma laureen', 'riedl lennart', 'rothämel gianluca martin', 'salomo lilly', 'schuckay tyler philipp', 'wähner philipp', 'kaminski ronak', 'musaeva tanzila', 'thrän mia luise', 'weißheit emelie', 'zimmer hanna elise', 'anding charlotte', 'danz solveig', 'friedrich tom', 'hessemüller hannes', 'hofmann amy-lynn', 'jung pia', 'klee tinke', 'knape emily', 'schettler latoya']
+['happ felix', 'hardt lisa', 'hessenmöller ben', 'holzhey linda', 'kellermann tom', 'leinhas eric oliver', 'marr amelie noelle', 'messerschmidt maya', 'möller lennox', 'reich emma laureen', 'riedl lennart', 'salomo lilly', 'schuckay tyler philipp', 'wähner philipp', 'kaminski ronak', 'bauerschmidt lena', 'drill felicitas', 'fräntzki amelie', 'hauck katharina', 'musaeva tanzila', 'thrän mia luise', 'weißheit emelie', 'zimmer hanna elise', 'anding charlotte', 'hessemüller hannes', 'hofmann amy-lynn', 'jung pia', 'klee tinke', 'knape emily', 'schettler latoya']
 len --> 30
 mean satisfaction - 100.0
-INFO line : 140 Modules.statistik_calc 2025-10-17 16:50:55,660  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,378  : 
 semestr --> 12.1
 sport --> Volleyball
-['happ felix', 'hardt lisa', 'holzhey linda', 'marr amelie noelle', 'messerschmidt maya', 'möller lennox', 'reich emma laureen', 'riedl lennart', 'rothämel gianluca martin', 'salomo lilly', 'schuckay tyler philipp', 'wähner philipp', 'kaminski ronak', 'drill felicitas', 'fräntzki amelie', 'hauck katharina', 'heiligenstadt larissa lynn', 'lemuth maja', 'möller milo noel', 'musaeva tanzila', 'thrän mia luise', 'zimmer hanna elise', 'schatt maike', 'schettler latoya']
-len --> 24
-mean satisfaction - 100.0
-INFO line : 140 Modules.statistik_calc 2025-10-17 16:50:55,661  : 
+['berthold jeremy', 'happ felix', 'hardt lisa', 'hinz selma josephine', 'holzhey linda', 'kellermann tom', 'leinhas eric oliver', 'marr amelie noelle', 'messerschmidt maya', 'möller lennox', 'reich emma laureen', 'riedl lennart', 'rothämel gianluca martin', 'salomo lilly', 'wagner emma', 'kaminski ronak', 'drill felicitas', 'fräntzki amelie', 'hauck katharina', 'heiligenstadt larissa lynn', 'knapp vianne marie helene', 'thrän mia luise', 'zimmer hanna elise', 'schatt maike', 'schettler latoya', 'weisheit simon']
+len --> 26
+mean satisfaction - 97.46153846153847
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,379  : 
 semestr --> 11.2
 sport --> Fußball
-['könig liam rey', 'meinhold helene', 'möller lennox', 'recknagel severin sören', 'frobenius hennar', 'lukinov polina', 'möller milo noel', 'reis tim matthias', 'schröder ben', 'streve luis', 'eck alexander', 'holland-nell karl erik', 'kaminski johannes', 'kaufmann eric', 'kordi ahmad', 'kössel mick christian', 'schatt maike', 'weinknecht elia', 'weisheit simon']
-len --> 19
-mean satisfaction - 87.78947368421052
-INFO line : 140 Modules.statistik_calc 2025-10-17 16:50:55,662  : 
+['hinz selma josephine', 'könig liam rey', 'meinhold helene', 'recknagel severin sören', 'rothämel gianluca martin', 'wagner emma', 'frobenius hennar', 'lukinov polina', 'möller milo noel', 'reis tim matthias', 'schröder ben', 'streve luis', 'eck alexander', 'holland-nell karl erik', 'kaminski johannes', 'kaufmann eric', 'kordi ahmad', 'kössel mick christian', 'schatt maike', 'weinknecht elia', 'weisheit simon']
+len --> 21
+mean satisfaction - 90.57142857142857
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,380  : 
 semestr --> 11.1
 sport --> Gymnastik/Tanz
-['muster max', 'dehler marietta', 'hardt lisa', 'holzhey linda', 'marr amelie noelle', 'messerschmidt maya', 'müller cecile claire', 'salomo lilly', 'kaminski ronak', 'baier lisa marie', 'bauerschmidt lena', 'brothuhn hannes enxiang', 'drill felicitas', 'hauck katharina', 'heiligenstadt larissa lynn', 'knapp vianne marie helene', 'lukinov polina', 'mey svenja', 'reis tim matthias', 'zimmer hanna elise', 'danz solveig', 'hofmann amy-lynn', 'kaufmann eric', 'schettler latoya']
-len --> 24
-mean satisfaction - 86.25
-INFO line : 140 Modules.statistik_calc 2025-10-17 16:50:55,664  : 
+['muster max', 'dehler marietta', 'hardt lisa', 'heil mea matilda', 'holzhey linda', 'marr amelie noelle', 'messerschmidt maya', 'müller cecile claire', 'reich emma laureen', 'salomo lilly', 'kaminski ronak', 'baier lisa marie', 'drill felicitas', 'hauck katharina', 'heiligenstadt larissa lynn', 'knapp vianne marie helene', 'lukinov polina', 'mey svenja', 'zimmer hanna elise', 'hofmann amy-lynn', 'kaufmann eric', 'schettler latoya']
+len --> 22
+mean satisfaction - 88.0
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,382  : 
 semestr --> 11.1
 sport --> Leichtathletik
-['könig liam rey', 'möller lennox', 'schuckay tyler philipp', 'wagner emma', 'wagner josephine', 'bätz eddie', 'fräntzki amelie', 'handy jonathan', 'lemuth maja', 'möller milo noel', 'musaeva tanzila', 'osterwald erik', 'schmidt moritz', 'schröder ben', 'thrän mia luise', 'schatt maike', 'weisheit simon']
-len --> 17
-mean satisfaction - 72.70588235294117
-INFO line : 140 Modules.statistik_calc 2025-10-17 16:50:55,665  : 
+['happ felix', 'hessenmöller ben', 'könig liam rey', 'leinhas eric oliver', 'möller lennox', 'recknagel severin sören', 'riedl lennart', 'wagner emma', 'bätz eddie', 'fräntzki amelie', 'handy jonathan', 'lemuth maja', 'möller milo noel', 'musaeva tanzila', 'osterwald erik', 'streve luis', 'thrän mia luise', 'schatt maike', 'weisheit simon']
+len --> 19
+mean satisfaction - 75.63157894736842
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,383  : 
 semestr --> 11.1
 sport --> Badminton
-['berthold jeremy', 'fuchs ludwig', 'happ felix', 'heil mea matilda', 'hessenmöller ben', 'hinz selma josephine', 'kellermann tom', 'leinhas eric oliver', 'meinhold helene', 'recknagel severin sören', 'reich emma laureen', 'riedl lennart', 'rothämel gianluca martin', 'schmeider sophie', 'wähner philipp', 'frobenius hennar', 'streve luis', 'weißheit emelie', 'anding charlotte', 'eck alexander', 'friedrich tom', 'hessemüller hannes', 'holland-nell karl erik', 'jung pia', 'kaminski johannes', 'klee tinke', 'knape emily', 'kordi ahmad', 'kössel mick christian', 'weinknecht elia']
+['berthold jeremy', 'fuchs ludwig', 'hinz selma josephine', 'kellermann tom', 'meinhold helene', 'rothämel gianluca martin', 'schmeider sophie', 'schuckay tyler philipp', 'wagner josephine', 'wähner philipp', 'bauerschmidt lena', 'brothuhn hannes enxiang', 'frobenius hennar', 'reis tim matthias', 'schmidt moritz', 'schröder ben', 'weißheit emelie', 'anding charlotte', 'danz solveig', 'eck alexander', 'friedrich tom', 'hessemüller hannes', 'holland-nell karl erik', 'jung pia', 'kaminski johannes', 'klee tinke', 'knape emily', 'kordi ahmad', 'kössel mick christian', 'weinknecht elia']
 len --> 30
 mean satisfaction - 98.9
-INFO line : 140 Modules.statistik_calc 2025-10-17 16:50:55,666  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,384  : 
 semestr --> 12.1
 sport --> Badminton
-['berthold jeremy', 'hessenmöller ben', 'hinz selma josephine', 'kellermann tom', 'leinhas eric oliver', 'meinhold helene', 'recknagel severin sören', 'bauerschmidt lena', 'knapp vianne marie helene', 'lukinov polina', 'reis tim matthias', 'schröder ben', 'streve luis', 'weißheit emelie', 'anding charlotte', 'danz solveig', 'eck alexander', 'friedrich tom', 'hessemüller hannes', 'hofmann amy-lynn', 'holland-nell karl erik', 'jung pia', 'kaminski johannes', 'kaufmann eric', 'klee tinke', 'knape emily', 'kordi ahmad', 'kössel mick christian', 'weinknecht elia', 'weisheit simon']
-len --> 30
-mean satisfaction - 98.9
-INFO line : 239 Modules.statistik_calc 2025-10-17 16:50:55,668  : 
+['hessenmöller ben', 'meinhold helene', 'recknagel severin sören', 'schuckay tyler philipp', 'wähner philipp', 'bauerschmidt lena', 'lemuth maja', 'lukinov polina', 'möller milo noel', 'musaeva tanzila', 'reis tim matthias', 'schröder ben', 'streve luis', 'weißheit emelie', 'anding charlotte', 'danz solveig', 'eck alexander', 'friedrich tom', 'hessemüller hannes', 'hofmann amy-lynn', 'holland-nell karl erik', 'jung pia', 'kaminski johannes', 'kaufmann eric', 'klee tinke', 'knape emily', 'kordi ahmad', 'kössel mick christian', 'weinknecht elia']
+len --> 29
+mean satisfaction - 100.0
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,386  : 
 statistiks of solo_stat :
-{'mean satisfaction': np.float64(92.55), 'min satisfaction': np.float64(33.0), 'max satisfaction': np.float64(100.0), 'standard deviation': np.float64(11.35), 'dispercion': np.float64(128.82), 'median satisfaction': np.float64(100.0)}
-INFO line : 239 Modules.statistik_calc 2025-10-17 16:50:55,670  : 
+{'mean satisfaction': np.float64(93.96), 'min satisfaction': np.float64(67.0), 'max satisfaction': np.float64(100.0), 'standard deviation': np.float64(7.62), 'dispercion': np.float64(58.04), 'median satisfaction': np.float64(100.0)}
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,388  : 
 statistiks of sports_satisfaction :
                 mean_satisfaction
-Volleyball                 100.00
-Badminton                   98.90
-Fußball                     87.79
-Basketball                  87.59
-Gymnastik/Tanz              86.25
-Leichtathletik              72.71
-INFO line : 239 Modules.statistik_calc 2025-10-17 16:50:55,672  : 
+Badminton                   99.45
+Volleyball                  98.73
+Basketball                  92.99
+Fußball                     90.57
+Gymnastik/Tanz              88.00
+Leichtathletik              75.63
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,391  : 
 statistiks of semestrs_satisfaction :
       mean_satisfaction
-11.1              88.35
-11.2              92.07
-12.1              97.20
-INFO line : 239 Modules.statistik_calc 2025-10-17 16:50:55,673  : 
+11.1              89.30
+11.2              94.42
+12.1              98.14
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,391  : 
 statistiks of satisfaction_distribution :
 total_satisfaction
-85-100%    62
-60-85%      8
-30-60%      1
+85-100%    65
+60-85%      6
+30-60%      0
 0-30%       0
 Name: count, dtype: int64
-INFO line : 239 Modules.statistik_calc 2025-10-17 16:50:55,678  : 
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,396  : 
 statistiks of personal :
                   student  11.1_satisfaction  11.2_satisfaction  12.1_satisfaction  total_satisfaction
 0              muster max              100.0              100.0              100.0               100.0
-1         berthold jeremy              100.0              100.0              100.0               100.0
+1         berthold jeremy              100.0               67.0              100.0                89.0
 2         dehler marietta              100.0              100.0              100.0               100.0
 3            fuchs ludwig              100.0              100.0              100.0               100.0
-4              happ felix              100.0              100.0              100.0               100.0
+4              happ felix               67.0              100.0              100.0                89.0
 ..                    ...                ...                ...                ...                 ...
 66  kössel mick christian              100.0              100.0              100.0               100.0
 67           schatt maike               33.0               67.0              100.0                67.0
@@ -336,19 +336,19 @@ statistiks of personal :
 70         weisheit simon              100.0              100.0               67.0                89.0
 
 [71 rows x 5 columns]
-CRITICAL line : 245 Modules.statistik_calc 2025-10-17 16:50:55,679  : 
+CRITICAL line : 245 Modules.statistik_calc 2025-10-17 20:27:06,397  : 
 Empty DataFrame
 Columns: [student, 11.1_satisfaction, 11.2_satisfaction, 12.1_satisfaction, total_satisfaction]
 Index: []
-CRITICAL line : 247 Modules.statistik_calc 2025-10-17 16:50:55,679  : 
+CRITICAL line : 247 Modules.statistik_calc 2025-10-17 20:27:06,397  : 
 []
-WARNING line : 224 Modules.statistik_to_exel 2025-10-17 16:50:56,832  : 
-{'mean satisfaction': np.float64(92.55), 'min satisfaction': np.float64(33.0), 'max satisfaction': np.float64(100.0), 'standard deviation': np.float64(11.35), 'dispercion': np.float64(128.82), 'median satisfaction': np.float64(100.0)}
-WARNING line : 232 Modules.statistik_to_exel 2025-10-17 16:50:56,893  : 
+INFO line : 224 Modules.statistik_to_exel 2025-10-17 20:27:07,576  : 
+{'mean satisfaction': np.float64(93.96), 'min satisfaction': np.float64(67.0), 'max satisfaction': np.float64(100.0), 'standard deviation': np.float64(7.62), 'dispercion': np.float64(58.04), 'median satisfaction': np.float64(100.0)}
+INFO line : 232 Modules.statistik_to_exel 2025-10-17 20:27:07,637  : 
                 metrik    stat
-0    mean satisfaction   92.55
-1     min satisfaction   33.00
+0    mean satisfaction   93.96
+1     min satisfaction   67.00
 2     max satisfaction  100.00
-3   standard deviation   11.35
-4           dispercion  128.82
+3   standard deviation    7.62
+4           dispercion   58.04
 5  median satisfaction  100.00
