@@ -1,36 +1,36 @@
-DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,326  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:30:18,726  : 
 Basketball: eff=62.37, floor=2, ceil=3
-DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,327  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:30:18,726  : 
 Volleyball: eff=81.03, floor=2, ceil=3
-DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,327  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:30:18,726  : 
 Fußball: eff=37.33, floor=1, ceil=2
-DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,327  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:30:18,726  : 
 Gymnastik/Tanz: eff=35.96, floor=1, ceil=2
-DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,327  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:30:18,727  : 
 Badminton: eff=83.76, floor=2, ceil=3
-DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,328  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:30:18,727  : 
 Gerätturnen: eff=16.84, floor=0, ceil=1
-DEBUG line : 102 Modules.demand_calc 2025-10-17 20:27:05,328  : 
+DEBUG line : 102 Modules.demand_calc 2025-10-17 20:30:18,727  : 
 Leichtathletik: eff=38.70, floor=1, ceil=2
-DEBUG line : 108 Modules.demand_calc 2025-10-17 20:27:05,328  : 
+DEBUG line : 108 Modules.demand_calc 2025-10-17 20:30:18,727  : 
 Mean weight : , 2.196629213483146
-DEBUG line : 109 Modules.demand_calc 2025-10-17 20:27:05,328  : 
+DEBUG line : 109 Modules.demand_calc 2025-10-17 20:30:18,727  : 
 Anywhere count:, Counter({'Volleyball': 71, 'Badminton': 69, 'Basketball': 67, 'Fußball': 46, 'Leichtathletik': 46, 'Gymnastik/Tanz': 38, 'Gerätturnen': 19})
-DEBUG line : 110 Modules.demand_calc 2025-10-17 20:27:05,328  : 
+DEBUG line : 110 Modules.demand_calc 2025-10-17 20:30:18,728  : 
 Weighted count:, Counter({'Badminton': 184, 'Volleyball': 178, 'Basketball': 137, 'Leichtathletik': 85, 'Fußball': 82, 'Gymnastik/Tanz': 79, 'Gerätturnen': 37})
-DEBUG line : 111 Modules.demand_calc 2025-10-17 20:27:05,329  : 
+DEBUG line : 111 Modules.demand_calc 2025-10-17 20:30:18,728  : 
 Effective students:, {'Basketball': 62.36828644501279, 'Volleyball': 81.03324808184144, 'Fußball': 37.32992327365729, 'Gymnastik/Tanz': 35.96419437340153, 'Badminton': 83.76470588235294, 'Gerätturnen': 16.843989769820972, 'Leichtathletik': 38.69565217391305}
-DEBUG line : 112 Modules.demand_calc 2025-10-17 20:27:05,329  : 
+DEBUG line : 112 Modules.demand_calc 2025-10-17 20:30:18,728  : 
 Required groups:, {'Basketball': 2, 'Volleyball': 2, 'Fußball': 1, 'Gymnastik/Tanz': 1, 'Badminton': 2, 'Gerätturnen': 0, 'Leichtathletik': 1}
-DEBUG line : 113 Modules.demand_calc 2025-10-17 20:27:05,329  : 
+DEBUG line : 113 Modules.demand_calc 2025-10-17 20:30:18,728  : 
 sports in required groups - 9
-INFO line : 121 Modules.demand_calc 2025-10-17 20:27:05,329  : 
+INFO line : 121 Modules.demand_calc 2025-10-17 20:30:18,729  : 
 Final required_groups={'Basketball': 2, 'Volleyball': 2, 'Fußball': 1, 'Gymnastik/Tanz': 1, 'Badminton': 2, 'Gerätturnen': 0, 'Leichtathletik': 1}, total=9
-DEBUG line : 64 Modules.sem_building_model 2025-10-17 20:27:05,348  : 
+DEBUG line : 64 Modules.sem_building_model 2025-10-17 20:30:18,743  : 
 schedule - {11.1: {0: 'Leichtathletik', 1: 'Badminton', 2: 'Gymnastik/Tanz'}, 11.2: {0: 'Fußball', 1: 'Basketball', 2: 'Volleyball'}, 12.1: {0: 'Volleyball', 1: 'Basketball', 2: 'Badminton'}}
-INFO line : 96 Modules.students_appointment 2025-10-17 20:27:05,409  : 
+INFO line : 96 Modules.students_appointment 2025-10-17 20:30:18,804  : 
 Succesfully appointed students!
-DEBUG line : 99 Modules.students_appointment 2025-10-17 20:27:05,413  : 
+DEBUG line : 99 Modules.students_appointment 2025-10-17 20:30:18,808  : 
 Table for 11.1:
              Leichtathletik                 Badminton              Gymnastik/Tanz
 0                happ felix           berthold jeremy                  muster max
@@ -63,7 +63,7 @@ Table for 11.1:
 27                      NaN               kordi ahmad                         NaN
 28                      NaN     kössel mick christian                         NaN
 29                      NaN           weinknecht elia                         NaN
-DEBUG line : 99 Modules.students_appointment 2025-10-17 20:27:05,417  : 
+DEBUG line : 99 Modules.students_appointment 2025-10-17 20:30:18,812  : 
 Table for 11.2:
                      Fußball                  Basketball              Volleyball
 0       hinz selma josephine                  muster max              happ felix
@@ -96,7 +96,7 @@ Table for 11.2:
 27                       NaN                         NaN              klee tinke
 28                       NaN                         NaN             knape emily
 29                       NaN                         NaN        schettler latoya
-DEBUG line : 99 Modules.students_appointment 2025-10-17 20:27:05,422  : 
+DEBUG line : 99 Modules.students_appointment 2025-10-17 20:30:18,815  : 
 Table for 12.1:
                     Volleyball               Basketball                Badminton
 0              berthold jeremy               muster max         hessenmöller ben
@@ -128,7 +128,7 @@ Table for 12.1:
 26                         NaN                      NaN              kordi ahmad
 27                         NaN                      NaN    kössel mick christian
 28                         NaN                      NaN          weinknecht elia
-INFO line : 36 __main__ 2025-10-17 20:27:05,430  : 
+INFO line : 36 __main__ 2025-10-17 20:30:18,823  : 
 11.1 
 Leichtathletik    19
 Badminton         30
@@ -165,7 +165,7 @@ dtype: int64
 27                      NaN               kordi ahmad                         NaN
 28                      NaN     kössel mick christian                         NaN
 29                      NaN           weinknecht elia                         NaN
-INFO line : 36 __main__ 2025-10-17 20:27:05,434  : 
+INFO line : 36 __main__ 2025-10-17 20:30:18,828  : 
 11.2 
 Fußball       21
 Basketball    20
@@ -202,7 +202,7 @@ dtype: int64
 27                       NaN                         NaN              klee tinke
 28                       NaN                         NaN             knape emily
 29                       NaN                         NaN        schettler latoya
-INFO line : 36 __main__ 2025-10-17 20:27:05,438  : 
+INFO line : 36 __main__ 2025-10-17 20:30:18,832  : 
 12.1 
 Volleyball    26
 Basketball    16
@@ -238,66 +238,66 @@ dtype: int64
 26                         NaN                      NaN              kordi ahmad
 27                         NaN                      NaN    kössel mick christian
 28                         NaN                      NaN          weinknecht elia
-DEBUG line : 228 Modules.statistik_calc 2025-10-17 20:27:06,334  : 
+DEBUG line : 228 Modules.statistik_calc 2025-10-17 20:30:19,736  : 
 {'muster max': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'berthold jeremy': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'dehler marietta': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'fuchs ludwig': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'happ felix': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'hardt lisa': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'heil mea matilda': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'hessenmöller ben': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'hinz selma josephine': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'holzhey linda': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'kellermann tom': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'könig liam rey': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Basketball'}, 'leinhas eric oliver': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'marr amelie noelle': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'meinhold helene': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'messerschmidt maya': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'möller lennox': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'müller cecile claire': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'recknagel severin sören': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Badminton'}, 'reich emma laureen': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'riedl lennart': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'rothämel gianluca martin': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'salomo lilly': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'schmeider sophie': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'schuckay tyler philipp': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'wagner emma': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'wagner josephine': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'wähner philipp': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'kaminski ronak': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'baier lisa marie': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'bätz eddie': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'bauerschmidt lena': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'brothuhn hannes enxiang': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'drill felicitas': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'fräntzki amelie': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'frobenius hennar': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Basketball'}, 'handy jonathan': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'hauck katharina': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'heiligenstadt larissa lynn': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'knapp vianne marie helene': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Volleyball'}, 'lemuth maja': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Badminton'}, 'lukinov polina': {11.1: 'Gymnastik/Tanz', 11.2: 'Fußball', 12.1: 'Badminton'}, 'mey svenja': {11.1: 'Gymnastik/Tanz', 11.2: 'Basketball', 12.1: 'Basketball'}, 'möller milo noel': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Badminton'}, 'musaeva tanzila': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'osterwald erik': {11.1: 'Leichtathletik', 11.2: 'Basketball', 12.1: 'Basketball'}, 'reis tim matthias': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'schmidt moritz': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Basketball'}, 'schröder ben': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'streve luis': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Badminton'}, 'thrän mia luise': {11.1: 'Leichtathletik', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'weißheit emelie': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'zimmer hanna elise': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'anding charlotte': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'danz solveig': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Badminton'}, 'eck alexander': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'friedrich tom': {11.1: 'Badminton', 11.2: 'Basketball', 12.1: 'Badminton'}, 'hessemüller hannes': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'hofmann amy-lynn': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'holland-nell karl erik': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'jung pia': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'kaminski johannes': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'kaufmann eric': {11.1: 'Gymnastik/Tanz', 11.2: 'Fußball', 12.1: 'Badminton'}, 'klee tinke': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'knape emily': {11.1: 'Badminton', 11.2: 'Volleyball', 12.1: 'Badminton'}, 'kordi ahmad': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'kössel mick christian': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'schatt maike': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Volleyball'}, 'schettler latoya': {11.1: 'Gymnastik/Tanz', 11.2: 'Volleyball', 12.1: 'Volleyball'}, 'weinknecht elia': {11.1: 'Badminton', 11.2: 'Fußball', 12.1: 'Badminton'}, 'weisheit simon': {11.1: 'Leichtathletik', 11.2: 'Fußball', 12.1: 'Volleyball'}}
-INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,374  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:30:19,773  : 
 semestr --> 11.2
 sport --> Basketball
 ['muster max', 'berthold jeremy', 'dehler marietta', 'fuchs ludwig', 'heil mea matilda', 'müller cecile claire', 'schmeider sophie', 'wagner josephine', 'baier lisa marie', 'bätz eddie', 'brothuhn hannes enxiang', 'handy jonathan', 'heiligenstadt larissa lynn', 'knapp vianne marie helene', 'lemuth maja', 'mey svenja', 'osterwald erik', 'schmidt moritz', 'danz solveig', 'friedrich tom']
 len --> 20
 mean satisfaction - 90.1
-INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,375  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:30:19,774  : 
 semestr --> 12.1
 sport --> Basketball
 ['muster max', 'dehler marietta', 'fuchs ludwig', 'heil mea matilda', 'könig liam rey', 'müller cecile claire', 'schmeider sophie', 'wagner josephine', 'baier lisa marie', 'bätz eddie', 'brothuhn hannes enxiang', 'frobenius hennar', 'handy jonathan', 'mey svenja', 'osterwald erik', 'schmidt moritz']
 len --> 16
 mean satisfaction - 95.875
-INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,377  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:30:19,776  : 
 semestr --> 11.2
 sport --> Volleyball
 ['happ felix', 'hardt lisa', 'hessenmöller ben', 'holzhey linda', 'kellermann tom', 'leinhas eric oliver', 'marr amelie noelle', 'messerschmidt maya', 'möller lennox', 'reich emma laureen', 'riedl lennart', 'salomo lilly', 'schuckay tyler philipp', 'wähner philipp', 'kaminski ronak', 'bauerschmidt lena', 'drill felicitas', 'fräntzki amelie', 'hauck katharina', 'musaeva tanzila', 'thrän mia luise', 'weißheit emelie', 'zimmer hanna elise', 'anding charlotte', 'hessemüller hannes', 'hofmann amy-lynn', 'jung pia', 'klee tinke', 'knape emily', 'schettler latoya']
 len --> 30
 mean satisfaction - 100.0
-INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,378  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:30:19,776  : 
 semestr --> 12.1
 sport --> Volleyball
 ['berthold jeremy', 'happ felix', 'hardt lisa', 'hinz selma josephine', 'holzhey linda', 'kellermann tom', 'leinhas eric oliver', 'marr amelie noelle', 'messerschmidt maya', 'möller lennox', 'reich emma laureen', 'riedl lennart', 'rothämel gianluca martin', 'salomo lilly', 'wagner emma', 'kaminski ronak', 'drill felicitas', 'fräntzki amelie', 'hauck katharina', 'heiligenstadt larissa lynn', 'knapp vianne marie helene', 'thrän mia luise', 'zimmer hanna elise', 'schatt maike', 'schettler latoya', 'weisheit simon']
 len --> 26
 mean satisfaction - 97.46153846153847
-INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,379  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:30:19,777  : 
 semestr --> 11.2
 sport --> Fußball
 ['hinz selma josephine', 'könig liam rey', 'meinhold helene', 'recknagel severin sören', 'rothämel gianluca martin', 'wagner emma', 'frobenius hennar', 'lukinov polina', 'möller milo noel', 'reis tim matthias', 'schröder ben', 'streve luis', 'eck alexander', 'holland-nell karl erik', 'kaminski johannes', 'kaufmann eric', 'kordi ahmad', 'kössel mick christian', 'schatt maike', 'weinknecht elia', 'weisheit simon']
 len --> 21
 mean satisfaction - 90.57142857142857
-INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,380  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:30:19,779  : 
 semestr --> 11.1
 sport --> Gymnastik/Tanz
 ['muster max', 'dehler marietta', 'hardt lisa', 'heil mea matilda', 'holzhey linda', 'marr amelie noelle', 'messerschmidt maya', 'müller cecile claire', 'reich emma laureen', 'salomo lilly', 'kaminski ronak', 'baier lisa marie', 'drill felicitas', 'hauck katharina', 'heiligenstadt larissa lynn', 'knapp vianne marie helene', 'lukinov polina', 'mey svenja', 'zimmer hanna elise', 'hofmann amy-lynn', 'kaufmann eric', 'schettler latoya']
 len --> 22
 mean satisfaction - 88.0
-INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,382  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:30:19,780  : 
 semestr --> 11.1
 sport --> Leichtathletik
 ['happ felix', 'hessenmöller ben', 'könig liam rey', 'leinhas eric oliver', 'möller lennox', 'recknagel severin sören', 'riedl lennart', 'wagner emma', 'bätz eddie', 'fräntzki amelie', 'handy jonathan', 'lemuth maja', 'möller milo noel', 'musaeva tanzila', 'osterwald erik', 'streve luis', 'thrän mia luise', 'schatt maike', 'weisheit simon']
 len --> 19
 mean satisfaction - 75.63157894736842
-INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,383  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:30:19,782  : 
 semestr --> 11.1
 sport --> Badminton
 ['berthold jeremy', 'fuchs ludwig', 'hinz selma josephine', 'kellermann tom', 'meinhold helene', 'rothämel gianluca martin', 'schmeider sophie', 'schuckay tyler philipp', 'wagner josephine', 'wähner philipp', 'bauerschmidt lena', 'brothuhn hannes enxiang', 'frobenius hennar', 'reis tim matthias', 'schmidt moritz', 'schröder ben', 'weißheit emelie', 'anding charlotte', 'danz solveig', 'eck alexander', 'friedrich tom', 'hessemüller hannes', 'holland-nell karl erik', 'jung pia', 'kaminski johannes', 'klee tinke', 'knape emily', 'kordi ahmad', 'kössel mick christian', 'weinknecht elia']
 len --> 30
 mean satisfaction - 98.9
-INFO line : 140 Modules.statistik_calc 2025-10-17 20:27:06,384  : 
+INFO line : 140 Modules.statistik_calc 2025-10-17 20:30:19,783  : 
 semestr --> 12.1
 sport --> Badminton
 ['hessenmöller ben', 'meinhold helene', 'recknagel severin sören', 'schuckay tyler philipp', 'wähner philipp', 'bauerschmidt lena', 'lemuth maja', 'lukinov polina', 'möller milo noel', 'musaeva tanzila', 'reis tim matthias', 'schröder ben', 'streve luis', 'weißheit emelie', 'anding charlotte', 'danz solveig', 'eck alexander', 'friedrich tom', 'hessemüller hannes', 'hofmann amy-lynn', 'holland-nell karl erik', 'jung pia', 'kaminski johannes', 'kaufmann eric', 'klee tinke', 'knape emily', 'kordi ahmad', 'kössel mick christian', 'weinknecht elia']
 len --> 29
 mean satisfaction - 100.0
-INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,386  : 
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:30:19,784  : 
 statistiks of solo_stat :
 {'mean satisfaction': np.float64(93.96), 'min satisfaction': np.float64(67.0), 'max satisfaction': np.float64(100.0), 'standard deviation': np.float64(7.62), 'dispercion': np.float64(58.04), 'median satisfaction': np.float64(100.0)}
-INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,388  : 
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:30:19,787  : 
 statistiks of sports_satisfaction :
                 mean_satisfaction
 Badminton                   99.45
@@ -306,13 +306,13 @@ Basketball                  92.99
 Fußball                     90.57
 Gymnastik/Tanz              88.00
 Leichtathletik              75.63
-INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,391  : 
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:30:19,789  : 
 statistiks of semestrs_satisfaction :
       mean_satisfaction
 11.1              89.30
 11.2              94.42
 12.1              98.14
-INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,391  : 
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:30:19,790  : 
 statistiks of satisfaction_distribution :
 total_satisfaction
 85-100%    65
@@ -320,7 +320,7 @@ total_satisfaction
 30-60%      0
 0-30%       0
 Name: count, dtype: int64
-INFO line : 239 Modules.statistik_calc 2025-10-17 20:27:06,396  : 
+INFO line : 239 Modules.statistik_calc 2025-10-17 20:30:19,796  : 
 statistiks of personal :
                   student  11.1_satisfaction  11.2_satisfaction  12.1_satisfaction  total_satisfaction
 0              muster max              100.0              100.0              100.0               100.0
@@ -336,15 +336,15 @@ statistiks of personal :
 70         weisheit simon              100.0              100.0               67.0                89.0
 
 [71 rows x 5 columns]
-CRITICAL line : 245 Modules.statistik_calc 2025-10-17 20:27:06,397  : 
+CRITICAL line : 245 Modules.statistik_calc 2025-10-17 20:30:19,798  : 
 Empty DataFrame
 Columns: [student, 11.1_satisfaction, 11.2_satisfaction, 12.1_satisfaction, total_satisfaction]
 Index: []
-CRITICAL line : 247 Modules.statistik_calc 2025-10-17 20:27:06,397  : 
+CRITICAL line : 247 Modules.statistik_calc 2025-10-17 20:30:19,798  : 
 []
-INFO line : 224 Modules.statistik_to_exel 2025-10-17 20:27:07,576  : 
+INFO line : 224 Modules.statistik_to_exel 2025-10-17 20:30:20,969  : 
 {'mean satisfaction': np.float64(93.96), 'min satisfaction': np.float64(67.0), 'max satisfaction': np.float64(100.0), 'standard deviation': np.float64(7.62), 'dispercion': np.float64(58.04), 'median satisfaction': np.float64(100.0)}
-INFO line : 232 Modules.statistik_to_exel 2025-10-17 20:27:07,637  : 
+INFO line : 232 Modules.statistik_to_exel 2025-10-17 20:30:21,030  : 
                 metrik    stat
 0    mean satisfaction   93.96
 1     min satisfaction   67.00
