@@ -59,7 +59,8 @@ def students_appointing(df : pd.DataFrame, programms : dict) -> dict:
         for c in programms[s]:
             solver.Add(sum(x[row_idx, s, c] for row_idx, i in enumerate(data)) >= config.MIN_CAPACITY)
             solver.Add(sum(x[row_idx, s, c] for row_idx, i in enumerate(data)) <= config.MAX_CAPACITY)
-            
+    
+    stat = {}      
     objective = solver.Objective()
     for row_idx, i in enumerate(data):
         for s in programms.keys():
@@ -75,14 +76,19 @@ def students_appointing(df : pd.DataFrame, programms : dict) -> dict:
 
                 elif c in i_preferences:
                     score = 3 - i_preferences.index(c)
-
                 
+                else: 
+                    pass
+
+                stat[(row_idx, s, c)] = round(score / config.MAX_SEMESTR_SATISFACTION * 100, 2)
                 objective.SetCoefficient(x[row_idx, s, c], score)
 
     objective.SetMaximization()
-
+    
     status = solver.Solve()
-
+    
+    statistik_df = pd.DataFrame(columns= ['semestr', 'student', 'sport', 'sat'])
+    
     if status == pywraplp.Solver.OPTIMAL:
         for row_idx, i in enumerate(data):
             for s in programms.keys():
@@ -92,7 +98,11 @@ def students_appointing(df : pd.DataFrame, programms : dict) -> dict:
                         semestrs_dataframes[s].loc[
                             semestrs_dataframes[s][c].notna().sum(), c
                         ] = f"{norm(data[row_idx][nachname_idx])} {norm(data[row_idx][vorname_idx])}"
-
+                        
+                        sat = stat[(row_idx, s, c)]
+                        statistik_df.loc[len(statistik_df)] = [s, f"{norm(data[row_idx][nachname_idx])} {norm(data[row_idx][vorname_idx])}", c, sat]
+        
+        logger.debug(statistik_df)
         logger.info(f"Succesfully appointed students!")
         
         for sem, table in semestrs_dataframes.items():
@@ -101,5 +111,5 @@ def students_appointing(df : pd.DataFrame, programms : dict) -> dict:
     else:
         logger.warning(f"Something went wrong!")
     
-    return semestrs_dataframes
+    return semestrs_dataframes, statistik_df
     

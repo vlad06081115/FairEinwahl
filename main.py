@@ -30,7 +30,7 @@ def main(df: pd.DataFrame):
 
     programms = schedule_to_PROGRAMMS(schedule=schedule)
 
-    semestrs_dataframes = students_appointing(df=df, programms=programms)
+    semestrs_dataframes, statistik_df = students_appointing(df=df, programms=programms)
 
     for semestr in semestrs_dataframes:
         logger.info(
@@ -39,7 +39,7 @@ def main(df: pd.DataFrame):
 
     df_toExel(df=semestrs_dataframes)
 
-    statistik_summary = statistik_count(semestrs_dataframes, df)
+    statistik_summary = statistik_count(statistik_df)
     
     stat_to_pdf(statistik_summary= statistik_summary, semestrs_dfs= semestrs_dataframes)
 

@@ -28,7 +28,8 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
         sports = statistik_summary['sports_satisfaction']
         
         x_axis = list(sports.index)
-        y_axis = list(sports['mean_satisfaction'])
+        y_axis = list(sports.values)
+        
         
         plt.figure(figsize=(10, 6))  # Размер графика, чтобы надписи не налезали
         
@@ -73,7 +74,7 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
         semestrs_satisfaction = statistik_summary['semestrs_satisfaction']
         
         x_axis = [0,1,2]
-        y_axis = list(semestrs_satisfaction['mean_satisfaction'])
+        y_axis = list(semestrs_satisfaction.values)
 
         plt.figure(figsize=(10, 6))  # Размер графика, чтобы надписи не налезали
         
@@ -161,7 +162,7 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
             for key, cell in tabl.get_celld().items():
                 cell.set_width(max_width)
         
-        personal_sat = statistik_summary['personal']
+        statistik_df = statistik_summary['statistik_df']
         
         distribution = config.SATISFACTION_DISTRIBUTION
         colors = config.TABLE_COLORS
@@ -172,7 +173,6 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
             
             df = semestrs_dfs[semestr]
             cur_semestr = f"{semestr}_satisfaction"
-            
             
             fig, ax = plt.subplots(figsize = (10, 4 + len(df.values) * 0.2))
             ax.axis('off')
@@ -197,9 +197,9 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
                         cell.get_text().set_text('')
                         continue
                     
-                    match = personal_sat.loc[personal_sat['student'] == student, cur_semestr]
+                    match = statistik_df.loc[statistik_df['student'] == student].loc[statistik_df['semestr'] == semestr]
                     if not match.empty:
-                        satisfaction = match.values[0]
+                        satisfaction = match['sat'].values
                     else:
                         logger.warning(f"no student like {student} found!")
                     
@@ -229,7 +229,7 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
         
         met_df = pd.DataFrame.from_dict(data= metriks, orient= 'index', columns= ['stat']).reset_index(names= 'metrik')
         
-        logger.info(met_df)
+        logger.debug(met_df)
         
         tabl = plt.table(cellText= met_df.values, colLabels= met_df.columns, cellLoc= 'center', loc= 'center', colWidths=[0.18]*len(met_df.columns))
         tabl.scale(1.3, 1.3)

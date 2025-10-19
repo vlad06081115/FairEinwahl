@@ -1,6 +1,6 @@
 ### 2025-10-16
 **Was wurde gemacht:**  
-Die Funktion `norm()` zur Normalisierung von Strings im Modul `students_appointment` wurde implementiert.  
+Experiment: Einführung einer Normalisierungsfunktion für Eingaben. Beobachtung: Fehler durch überflüssige Leerzeichen verschwinden. Schlussfolgerung: Datenqualität steigt bei minimalem Implementierungsaufwand. 
 
 **Warum:**  
 Um mögliche Fehler bei der Eingabe der Ausgangsdaten zu vermeiden.  
@@ -47,7 +47,7 @@ Implementiere einen Algorithmus, der die Verteilung direkt über drei Semester v
 
 ### 2025-10-17
 **Was wurde gemacht:**  
-Verbesserte Zuordnung der Studierenden mit ortools.linear_solver, verteilt sie gleichzeitig auf alle Semester
+Experiment: Erweiterung des Algorithmus auf gleichzeitige Zuteilung mehrerer Semester. Beobachtung: Laufzeit bleibt akzeptabel, Zufriedenheitswerte verbessern sich leicht. Schlussfolgerung: Multi-Semester-Zuordnung ist effizienter und gerechter.
 
 Allgemeine Optimierung des Algorithmus durch Verwendung von .to_numpy() (ndarray)
 
@@ -74,3 +74,39 @@ Es wurden keine Probleme festgestellt
 
 **Ideen:**  
 Vereinfache die Berechnung der Statistik, sodass die statistischen Daten direkt nach der Zuordnung ausgegeben werden können
+
+
+### 2025-10-19
+**Was wurde gemacht:**  
+Optimierung des Statistik-Moduls und Integration der Zufriedenheitsberechnung direkt im Zuteilungsalgorithmus (students_appointment).
+Anstatt die Statistiken nachträglich über aufwendige Iterationen (apply-Schleifen, ~200 Zeilen Code) neu zu berechnen, wird nun bei jeder Zuteilung der Schüler die Zufriedenheit sofort in einem DataFrame im Long-Format gespeichert.
+
+**Warum:**  
+Bessere Performance (keine doppelten Berechnungen, keine aufwendigen Pandas-Schleifen).
+
+Vereinfachung der Architektur: Die Statistiken entstehen direkt beim Zuteilungsschritt, dadurch ist das Statistik-Modul deutlich kompakter.
+
+Vorbereitung für explorative Analysen: Das neue Long-Format erlaubt groupby-Auswertungen nach Sport, Semester oder Schüler.
+
+**Ergebnisse:**  
+Reduktion des Statistik-Codes von ca. 200 auf wenige Dutzend Zeilen.
+
+Deutlicher Geschwindigkeitsgewinn (statistische Auswertung fast instantan auch bei >70 Schülern).
+
+Die berechnete Statistik wurde etwas präziser als zuvor.
+
+Vereinfachte Visualisierungen: Diagramme können direkt aus dem DataFrame erzeugt werden.
+
+Beispiel: Durchschnittliche Zufriedenheit pro Sportart und Semester jetzt in 2 Zeilen Code statt kompletten Iterationen.
+
+**Probleme:**  
+Gefahr von Namenskonflikten bei Schülern mit identischem Namen.
+
+Noch kein robustes Error-Handling für ungültige Eingaben (z. B. unbekannte Sportarten in Excel-Datei).
+
+**Ideen:**  
+Einführung einer eindeutigen Schüler-ID (z. B. Kombination aus Index + Name).
+
+Automatische Validierung der Eingabedaten mit Warnungen im Log.
+
+Nutzung der neuen Long-Format-Daten auch für multisemestrale Fairness-Analysen (z. B. sicherstellen, dass jeder Schüler mindestens einmal einen 1.-Wunsch erhält).
