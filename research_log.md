@@ -110,3 +110,25 @@ Einführung einer eindeutigen Schüler-ID (z. B. Kombination aus Index + Name).
 Automatische Validierung der Eingabedaten mit Warnungen im Log.
 
 Nutzung der neuen Long-Format-Daten auch für multisemestrale Fairness-Analysen (z. B. sicherstellen, dass jeder Schüler mindestens einmal einen 1.-Wunsch erhält).
+
+
+### 2025-10-21
+**Was wurde gemacht:**  
+Die Datei `config.py` wurde überarbeitet, sodass alle Dateipfade nun dynamisch mit der Bibliothek `pathlib` generiert werden. Dadurch erkennt das Programm automatisch die Projektstruktur, unabhängig vom Betriebssystem oder Speicherort.
+
+**Warum:**  
+Beim Übertragen des Projekts auf andere Geräte mussten die Dateipfade bisher manuell angepasst werden. Das führte zu Fehlern und erschwerte die Reproduzierbarkeit der Ergebnisse.
+
+**Ergebnisse:**  
+Das System erkennt nun selbstständig alle relevanten Verzeichnisse (z. B. *Data/*, *Output/*).  
+Der Start des Programms ist auf jedem Rechner ohne zusätzliche Konfiguration möglich.  
+Die Portabilität und Stabilität des Projekts wurde deutlich verbessert.
+
+**Probleme:**  
+Noch keine validierte Lösung für den Fall, dass Eingabedateien fehlen oder fehlerhaft benannt sind.
+
+**Ideen:**  
+Zukünftig soll das System automatisch prüfen, ob Eingabe- und Ausgabeverzeichnisse vorhanden sind,  
+und bei Bedarf diese selbstständig anlegen.  
+Außerdem könnten alle Parameter in `config.py` über eine Benutzeroberfläche anpassbar werden,  
+um die Definition beliebiger Semester und Slots zu ermöglichen.
