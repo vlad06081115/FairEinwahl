@@ -1,3 +1,7 @@
+import matplotlib
+matplotlib.use('Agg')  # Kein GUI, nur Dateiausgabe
+
+
 import pandas as pd
 import logging
 from . import config

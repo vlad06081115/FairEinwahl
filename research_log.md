@@ -132,3 +132,34 @@ Zukünftig soll das System automatisch prüfen, ob Eingabe- und Ausgabeverzeichn
 und bei Bedarf diese selbstständig anlegen.  
 Außerdem könnten alle Parameter in `config.py` über eine Benutzeroberfläche anpassbar werden,  
 um die Definition beliebiger Semester und Slots zu ermöglichen.
+
+
+### 2025-10-22
+**Was wurde gemacht:**  
+Umstellung der gesamten Datenverarbeitung auf ein indexbasiertes, modulares Pipeline-System.
+Die Schüler werden jetzt nicht mehr über Namen, sondern über eindeutige Indizes identifiziert.
+Dadurch wurde die Datenübergabe zwischen den Modulen (Zuteilung → Statistik → Export) vollständig stabilisiert.
+
+**Warum:**  
+Die bisherige Architektur basierte auf Namensstrings, die bei Namensgleichheit zu fehlerhaften Zuordnungen führen konnten.
+Außerdem war die Übergabe der DataFrames an die Ausgabemodule teilweise unflexibel.
+Ziel war es, eine wissenschaftlich reproduzierbare Pipeline zu schaffen, bei der jede Komponente klar definierte Eingabe- und Ausgabeformate hat.
+
+**Ergebnisse:**  
+Einführung des Objekts ready_semestrs_dfs, das als zentrales Datenpaket zwischen den Modulen dient.
+
+Vereinheitlichung der Datenflüsse im gesamten Projekt (von der Zuteilung bis zur finalen Ausgabe).
+
+Wegfall redundanter Berechnungen und vereinfachte Erweiterbarkeit.
+
+Deutlich verbesserte Robustheit beim Systemtransfer – kein manuelles Anpassen mehr nötig.
+
+**Probleme:**  
+Noch keine Fehler festgestellt, aber für große Datensätze (>200 Schüler) sollte die Performance weiter getestet werden.
+
+**Ideen:**  
+Ergänze ein optionales metadata-Feld in ready_semestrs_dfs (z. B. Rechenzeit, Durchschnittszufriedenheit, Schüleranzahl).
+
+Erweiterung des Systems um eine automatisierte Validierung der Zwischenergebnisse.
+
+Dokumentation der neuen Architektur im Diagrammformat (Dataflow- oder Pipeline-Skizze für den JuFo-Bericht).

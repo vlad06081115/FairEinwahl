@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use("Agg")
+
 import pandas as pd
 from . import config
 import matplotlib.pyplot as plt
@@ -145,6 +148,8 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
     
     def satisfaction_table(pdf : PdfPages):
         
+        ready_semestrs_dfs = {}
+        
         def max_cols_width(tabl):
             
             max_width = 0
@@ -172,7 +177,6 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
         for semestr in config.SEMESTRS:
             
             df = semestrs_dfs[semestr]
-            cur_semestr = f"{semestr}_satisfaction"
             
             fig, ax = plt.subplots(figsize = (10, 4 + len(df.values) * 0.2))
             ax.axis('off')
@@ -189,33 +193,43 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
                 for col in range(len(df.columns)):
                     
                     cell = tabl[(row, col)]
-                    student = norm(cell.get_text().get_text())
+                    student_idx = norm(cell.get_text().get_text())
                     
                     cell.set_edgecolor("#cccccc")
                     
-                    if not student or student == 'nan':
+                    if not student_idx or student_idx == 'nan':
                         cell.get_text().set_text('')
                         continue
                     
-                    match = statistik_df.loc[statistik_df['student'] == student].loc[statistik_df['semestr'] == semestr]
+                    student_idx = int(student_idx)
+                    
+                    match = statistik_df.loc[statistik_df['std_idx'] == student_idx].loc[statistik_df['semestr'] == semestr]
                     if not match.empty:
-                        satisfaction = match['sat'].values
+                        satisfaction = match['sat'].values[0]
+                        cell.get_text().set_text(match['student'].values[0])
+                        
+                        df.iloc[row - 1, col] = match['student'].values[0]
+                        
                     else:
-                        logger.warning(f"no student like {student} found!")
+                        logger.warning(f"no student like {statistik_df.loc[statistik_df['std_idx'] == student_idx, 'student']} found!")
                     
                     for i, ran in enumerate(ranges):
                         
                         if ran[0] <= satisfaction <= ran[1]:
                             cell.set_facecolor(colors[i])
             
+            max_cols_width(tabl)
+            
+            ready_semestrs_dfs[semestr] = df         
+            
             handles = [Patch(facecolor=c, label=l) for c, l in zip(colors, distribution)]
             plt.legend(handles = handles,title = 'Distribution Range', loc = 'upper right', bbox_to_anchor=(1.05, 1))
-            
-            max_cols_width(tabl)
             
             plt.tight_layout()
             pdf.savefig()
             plt.close()
+        
+        return ready_semestrs_dfs
     
     def stat_metriks_table(pdf : PdfPages):
         
@@ -258,10 +272,12 @@ def stat_to_pdf(statistik_summary : dict, semestrs_dfs : dict):
 
         semestr_bars(pdf)
     
-        satisfaction_table(pdf)
+        ready_semestrs_dfs = satisfaction_table(pdf)
         
         stat_metriks_table(pdf)
 
         plt.close('all')
+        
+    return ready_semestrs_dfs
     
     

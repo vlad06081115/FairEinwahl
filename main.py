@@ -37,11 +37,11 @@ def main(df: pd.DataFrame):
             f"{semestr} \n{semestrs_dataframes[semestr].notna().sum()} \n{semestrs_dataframes[semestr]}"
         )
 
-    df_toExel(df=semestrs_dataframes)
-
     statistik_summary = statistik_count(statistik_df)
     
-    stat_to_pdf(statistik_summary= statistik_summary, semestrs_dfs= semestrs_dataframes)
+    ready_semestrs_dfs = stat_to_pdf(statistik_summary= statistik_summary, semestrs_dfs= semestrs_dataframes)
 
-
+    df_toExel(df=ready_semestrs_dfs)
+    
+    
 main(df)

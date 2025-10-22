@@ -87,7 +87,7 @@ def students_appointing(df : pd.DataFrame, programms : dict) -> dict:
     
     status = solver.Solve()
     
-    statistik_df = pd.DataFrame(columns= ['semestr', 'student', 'sport', 'sat'])
+    statistik_df = pd.DataFrame(columns= ['semestr', 'std_idx', 'student', 'sport', 'sat'])
     
     if status == pywraplp.Solver.OPTIMAL:
         for row_idx, i in enumerate(data):
@@ -97,10 +97,10 @@ def students_appointing(df : pd.DataFrame, programms : dict) -> dict:
                         
                         semestrs_dataframes[s].loc[
                             semestrs_dataframes[s][c].notna().sum(), c
-                        ] = f"{norm(data[row_idx][nachname_idx])} {norm(data[row_idx][vorname_idx])}"
+                        ] = f"{row_idx}"
                         
                         sat = stat[(row_idx, s, c)]
-                        statistik_df.loc[len(statistik_df)] = [s, f"{norm(data[row_idx][nachname_idx])} {norm(data[row_idx][vorname_idx])}", c, sat]
+                        statistik_df.loc[len(statistik_df)] = [s, row_idx, f"{norm(data[row_idx][nachname_idx])} {norm(data[row_idx][vorname_idx])}", c, sat]
         
         logger.debug(statistik_df)
         logger.info(f"Succesfully appointed students!")
