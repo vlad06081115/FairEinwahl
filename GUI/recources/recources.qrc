@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>images/FairEinwahlLogo.png</file>
+        <file>images/icons/home.png</file>
+        <file>images/icons/blue-document--plus.png</file>
+        <file>images/icons/blue-document--minus.png</file>
+        <file>images/icons/blue-document--pencil.png</file>
+    </qresource>
+</RCC>
